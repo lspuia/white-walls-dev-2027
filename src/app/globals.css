@@ -1,26 +1,122 @@
 @import "tailwindcss";
 
+@theme {
+  /* ---- Palette (CLAUDE.md) ---- */
+  --color-bone: #fbf9f6;
+  --color-sand: #f4f0e8;
+  --color-wash: #e8e2d6;
+  --color-ink: #4a443e;
+  --color-soft: #6e6860;
+  --color-mute: #969188;
+  --color-rule: #e2dcd1;
+  --color-near: #1a1714;
+  --color-cream: #f5f2ed;
+  --color-brass: #c8b89a;
+  --color-bronze: #8a6e45;
+
+  /* Extensions the Figma frame uses that the palette table does not name */
+  --color-nav: #5a544d;   /* inactive nav on bone */
+  --color-haze: #cec8be;  /* lead paragraph on dark */
+  --color-cue: #8a857c;   /* scroll cue label */
+
+  --font-display: var(--font-cormorant);
+  --font-sans: var(--font-jost);
+
+  /* ---- Type scale ----
+     Consolidated from the ad-hoc Figma numbers into fluid tokens.
+     The vw term resolves to the exact desktop size at the 1512 frame. */
+  --text-display: clamp(2.875rem, 6.184vw, 5.844rem);   /* 93.5 */
+  --text-title: clamp(2.625rem, 5.324vw, 5.031rem);     /* 80.5 — stub page titles */
+  --text-contact: clamp(2.375rem, 4.067vw, 3.844rem);   /* 61.5 */
+  --text-quote: clamp(1.875rem, 3.373vw, 3.188rem);     /* 51 */
+  --text-heading: clamp(1.938rem, 3.075vw, 2.906rem);   /* 46.5 */
+  --text-statement: clamp(1.438rem, 2.216vw, 2.094rem); /* 33.5 */
+  --text-service: clamp(1.563rem, 2.083vw, 1.969rem);   /* 31.5 */
+  --text-product: clamp(1.313rem, 1.62vw, 1.531rem);    /* 24.5 */
+  --text-lead: clamp(0.969rem, 1.157vw, 1.094rem);      /* 17.5 */
+  --text-body: clamp(0.906rem, 1.058vw, 1rem);          /* 16 */
+  --text-footnav: 0.969rem;                             /* 15.5 */
+  --text-caption: 0.844rem;                             /* 13.5 */
+  --text-eyebrow: 0.781rem;                             /* 12.5 */
+  --text-legal: 0.75rem;                                /* 12 */
+  --text-cue: 0.688rem;                                 /* 11 */
+
+  --breakpoint-tab: 834px;
+  --breakpoint-desk: 1200px;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Gutter per the breakpoint table: 24 / 56 / 72 */
+  --gutter: 24px;
+  /* Section rhythm — 150px at the desktop frame */
+  --pad-y: clamp(4.5rem, 9.921vw, 9.375rem);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@media (min-width: 834px) {
+  :root { --gutter: 56px; }
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@media (min-width: 1200px) {
+  :root { --gutter: 72px; }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-bone);
+  color: var(--color-ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+@utility shell {
+  width: 100%;
+  max-width: 1512px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+@utility band {
+  padding-block: var(--pad-y);
+}
+
+/* Eyebrow / small-caps label tier — Jost Light, tracked 2.4 */
+@utility eyebrow {
+  font-size: var(--text-eyebrow);
+  font-weight: 300;
+  letter-spacing: 0.192em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Nav tier — Jost Medium, tracked 2.4 */
+@utility navlabel {
+  font-size: var(--text-eyebrow);
+  font-weight: 500;
+  letter-spacing: 0.192em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+/* Mizo lines: Jost Medium small caps, bronze, ~65% of the adjacent English */
+@utility mizo {
+  font-weight: 500;
+  font-size: 0.65em;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-bronze);
+  line-height: 1.4;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

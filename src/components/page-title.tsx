@@ -1,14 +1,22 @@
-/** Stub page title band — header, title, footer, per the Figma stubs. */
+/** Stub page title band. Centred per the Figma stubs; `align="left"` for
+    pages that follow the two-column editorial layout. */
 export function PageTitle({
   eyebrow,
   title,
+  align = "center",
 }: {
   eyebrow?: string;
   title: string;
+  align?: "center" | "left";
 }) {
+  const left = align === "left";
   return (
-    <section className="band bg-bone">
-      <div className="shell flex flex-col items-center gap-[24px] text-center">
+    <section className={left ? "bg-bone pt-[var(--pad-y)]" : "band bg-bone"}>
+      <div
+        className={`shell flex flex-col gap-[24px] ${
+          left ? "items-start text-left" : "items-center text-center"
+        }`}
+      >
         {eyebrow && (
           <p className="eyebrow tracking-[0.208em] text-brass">{eyebrow}</p>
         )}

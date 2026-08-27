@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     url: "https://whitewalls.in",
     title: "White Walls — Interior Design Studio, Aizawl",
     description:
-      "Interior design, joinery and hardware — one studio, whole rooms, since 2013.",
+      "Interior design, joinery and hardware — one studio, whole rooms, since 2017.",
   },
 };
 

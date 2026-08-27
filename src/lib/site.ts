@@ -22,7 +22,7 @@ export const studio = {
   proprietor: "Liansangkimi Pachuau",
   city: "Aizawl, Mizoram",
   hours: "Monday–Saturday, 9:30–18:00",
-  since: 2013,
+  since: 2017,
   // TODO(owners): replace with the studio's live WhatsApp number (E.164, no +).
   whatsapp: "919000000000",
   // TODO(owners): replace with the studio's live address.

@@ -23,7 +23,7 @@ const DEALERSHIPS = [
 export default function ProfilePage() {
   return (
     <>
-      <PageTitle align="left" title="Profile" />
+      <PageTitle eyebrow="The studio" title="Profile" />
 
       {/* Our story — text left, portrait right. Image is top-aligned and the
           text column drops, per the reference rhythm. */}

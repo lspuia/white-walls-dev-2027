@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { PageTitle } from "@/components/page-title";
 import { PlaceholderImage } from "@/components/placeholder-image";
 
 export const metadata: Metadata = {
@@ -24,21 +25,10 @@ const INTERIORS = [
 export default function InteriorsPage() {
   return (
     <>
-      {/* Full-bleed banner with the page title set in a card over it. */}
-      <section className="relative">
-        <PlaceholderImage
-          label="Interiors banner"
-          className="h-[220px] w-full tab:h-[280px] desk:h-[320px]"
-        />
-        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-          <p className="bg-bone/95 px-[48px] py-[24px] font-display text-[length:var(--text-heading)] font-light leading-[1.16] tracking-[-0.006em] text-ink tab:px-[64px] tab:py-[28px]">
-            Interiors
-          </p>
-        </div>
-      </section>
+      <PageTitle eyebrow="Selected work" title="Interiors" />
 
       {/* Centred intro, narrow measure. */}
-      <section className="bg-bone py-[64px] tab:py-[80px]">
+      <section className="bg-bone pb-[64px] tab:pb-[72px]">
         <div className="shell flex justify-center">
           <p className="max-w-[700px] text-center text-[length:var(--text-lead)] leading-[1.8] text-soft">
             Selected residential and commercial interiors across Aizawl and

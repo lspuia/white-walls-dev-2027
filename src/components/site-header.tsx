@@ -34,7 +34,7 @@ export function SiteHeader() {
         aria-label="Primary"
         className="shell hidden tab:grid grid-cols-[1fr_auto_1fr] items-center gap-[32px] py-[44px]"
       >
-        <div className="flex items-center justify-around">
+        <div className="flex items-center justify-center gap-[40px] desk:gap-[56px]">
           {left.map((item) => (
             <Link
               key={item.href}
@@ -55,7 +55,7 @@ export function SiteHeader() {
           <Logo priority className="w-[200px] desk:w-[260px]" />
         </Link>
 
-        <div className="flex items-center justify-around">
+        <div className="flex items-center justify-center gap-[40px] desk:gap-[56px]">
           {right.map((item) => (
             <Link
               key={item.href}

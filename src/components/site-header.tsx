@@ -28,7 +28,7 @@ export function SiteHeader() {
   const right = HEADER_NAV.slice(2);
 
   return (
-    <header className="bg-bone">
+    <header className="border-b border-rule bg-bone">
       {/* Tablet and desktop: one row — nav, logo, nav. The logo is home. */}
       <nav
         aria-label="Primary"

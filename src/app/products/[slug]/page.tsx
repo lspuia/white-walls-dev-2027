@@ -3,8 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageTitle } from "@/components/page-title";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import { WhatsAppLink } from "@/components/whatsapp-link";
-import { Logo } from "@/components/logo";
+import { WhatsAppBand } from "@/components/whatsapp-band";
 import { PRODUCTS, productBySlug } from "@/lib/products";
 
 /** Every product page is known at build time, so all render static. */
@@ -66,21 +65,11 @@ export default async function ProductPage(
         </div>
       </section>
 
-      <section className="bg-near">
-        <div className="shell flex flex-col items-center gap-[30px] py-[100px] text-center">
-          <Logo reversed className="w-[176px]" />
-          <p className="max-w-[620px] font-display text-[length:var(--text-statement)] font-light italic leading-[1.5] text-cream">
-            Ask us about {product.name}.
-          </p>
-          <WhatsAppLink
-            location={`product-${product.slug}`}
-            prefill={`Hello White Walls — I'd like to ask about ${product.name}. `}
-            className="eyebrow tracking-[0.176em] text-brass transition-colors hover:text-cream"
-          >
-            WhatsApp the studio
-          </WhatsAppLink>
-        </div>
-      </section>
+      <WhatsAppBand
+        location={`product-${product.slug}`}
+        line={`Ask us about ${product.name}.`}
+        prefill={`Hello White Walls — I'd like to ask about ${product.name}. `}
+      />
     </>
   );
 }

@@ -23,23 +23,24 @@
   --font-sans: var(--font-jost);
 
   /* ---- Type scale ----
-     Consolidated from the ad-hoc Figma numbers into fluid tokens.
-     The vw term resolves to the exact desktop size at the 1512 frame. */
-  --text-display: clamp(2.875rem, 6.184vw, 5.844rem);   /* 93.5 */
-  --text-title: clamp(2.625rem, 5.324vw, 5.031rem);     /* 80.5 — stub page titles */
-  --text-contact: clamp(2.375rem, 4.067vw, 3.844rem);   /* 61.5 */
-  --text-quote: clamp(1.875rem, 3.373vw, 3.188rem);     /* 51 */
-  --text-heading: clamp(1.938rem, 3.075vw, 2.906rem);   /* 46.5 */
-  --text-statement: clamp(1.438rem, 2.216vw, 2.094rem); /* 33.5 */
-  --text-service: clamp(1.563rem, 2.083vw, 1.969rem);   /* 31.5 */
-  --text-product: clamp(1.313rem, 1.62vw, 1.531rem);    /* 24.5 */
-  --text-lead: clamp(0.969rem, 1.157vw, 1.094rem);      /* 17.5 */
-  --text-body: clamp(0.906rem, 1.058vw, 1rem);          /* 16 */
-  --text-footnav: 0.969rem;                             /* 15.5 */
-  --text-caption: 0.844rem;                             /* 13.5 */
-  --text-eyebrow: 0.781rem;                             /* 12.5 */
-  --text-legal: 0.75rem;                                /* 12 */
-  --text-cue: 0.688rem;                                 /* 11 */
+     Consolidated from the ad-hoc Figma numbers into fluid tokens, then
+     scaled up 8% across the whole ramp. The vw term resolves to the
+     desktop size at the 1512 frame; the comment gives that size in px. */
+  --text-display: clamp(3.105rem, 6.679vw, 6.312rem);    /* 101 */
+  --text-title: clamp(2.835rem, 5.75vw, 5.434rem);      /* 86.9 — stub page titles */
+  --text-contact: clamp(2.565rem, 4.393vw, 4.152rem);    /* 66.4 */
+  --text-quote: clamp(2.025rem, 3.643vw, 3.443rem);    /* 55.1 */
+  --text-heading: clamp(2.093rem, 3.321vw, 3.138rem);    /* 50.2 */
+  --text-statement: clamp(1.553rem, 2.393vw, 2.262rem);    /* 36.2 */
+  --text-service: clamp(1.688rem, 2.25vw, 2.127rem);    /* 34 */
+  --text-product: clamp(1.418rem, 1.75vw, 1.653rem);    /* 26.5 */
+  --text-lead: clamp(1.047rem, 1.25vw, 1.182rem);    /* 18.9 */
+  --text-body: clamp(0.978rem, 1.143vw, 1.08rem);    /* 17.3 */
+  --text-footnav: 1.047rem;    /* 16.7 */
+  --text-caption: 0.912rem;    /* 14.6 */
+  --text-eyebrow: 0.843rem;    /* 13.5 */
+  --text-legal: 0.81rem;    /* 13 */
+  --text-cue: 0.743rem;    /* 11.9 */
 
   --breakpoint-tab: 834px;
   --breakpoint-desk: 1200px;
@@ -68,7 +69,8 @@ body {
   background: var(--color-bone);
   color: var(--color-ink);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-  font-weight: 300;
+  /* Regular, not Light. Display headings opt back down via `font-light`. */
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -84,10 +86,10 @@ body {
   padding-block: var(--pad-y);
 }
 
-/* Eyebrow / small-caps label tier — Jost Light, tracked 2.4 */
+/* Eyebrow / small-caps label tier — Jost Regular, tracked 2.4 */
 @utility eyebrow {
   font-size: var(--text-eyebrow);
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.192em;
   text-transform: uppercase;
   line-height: 1;
@@ -102,14 +104,24 @@ body {
   line-height: 1;
 }
 
-/* Mizo lines: Jost Medium small caps, bronze, ~65% of the adjacent English */
+/* Mizo label tier: Jost Medium small caps, ~65% of the adjacent English.
+   Colour is set per usage so the line can lift to brass on dark grounds. */
 @utility mizo {
   font-weight: 500;
   font-size: 0.65em;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--color-bronze);
   line-height: 1.4;
+}
+
+/* Mizo sentence tier. Same voice, but a full sentence is not a label —
+   uppercasing 70-odd characters of Mizo hurts legibility, so this keeps the
+   owners' sentence case and only lightly tracks it. */
+@utility mizo-sentence {
+  font-weight: 500;
+  font-size: 0.813rem;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
 }
 
 @media (prefers-reduced-motion: reduce) {

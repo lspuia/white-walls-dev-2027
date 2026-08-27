@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageTitle } from "@/components/page-title";
 import { PlaceholderImage } from "@/components/placeholder-image";
+import { WhatsAppBand } from "@/components/whatsapp-band";
 
 export const metadata: Metadata = {
   title: "Interiors",
@@ -51,6 +52,8 @@ export default function InteriorsPage() {
           </ul>
         </div>
       </section>
+
+      <WhatsAppBand location="interiors-band" />
     </>
   );
 }

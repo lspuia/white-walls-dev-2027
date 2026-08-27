@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { PageTitle } from "@/components/page-title";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import { Logo } from "@/components/logo";
-import { WhatsAppLink } from "@/components/whatsapp-link";
+import { WhatsAppBand } from "@/components/whatsapp-band";
 import { studio } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -102,23 +101,7 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      {/* Full-bleed dark band, closing the page on the studio's primary CTA.
-          Runs edge to edge and flush to the footer, like the philosophy band
-          on Home. */}
-      <section className="bg-near">
-        <div className="shell flex flex-col items-center gap-[30px] py-[100px] text-center">
-          <Logo reversed className="w-[176px]" />
-          <p className="max-w-[620px] font-display text-[length:var(--text-statement)] font-light italic leading-[1.5] text-cream">
-            Tell us about your space.
-          </p>
-          <WhatsAppLink
-            location="profile-band"
-            className="eyebrow tracking-[0.176em] text-brass transition-colors hover:text-cream"
-          >
-            WhatsApp the studio
-          </WhatsAppLink>
-        </div>
-      </section>
+      <WhatsAppBand location="profile-band" />
     </>
   );
 }

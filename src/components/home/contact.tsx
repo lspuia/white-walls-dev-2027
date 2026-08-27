@@ -1,5 +1,5 @@
 import { Mizo } from "../mizo";
-import { WhatsAppLink } from "../whatsapp-link";
+import { WhatsAppButton } from "../whatsapp-button";
 import { studio, mizo } from "@/lib/site";
 
 export function Contact() {
@@ -19,22 +19,18 @@ export function Contact() {
           <Mizo className="mt-[14px] block">{mizo.contactLead}</Mizo>
         </p>
 
-        <div className="mt-[22px] flex flex-col items-stretch gap-[16px] tab:flex-row tab:items-start">
-          <WhatsAppLink
-            location="home-contact"
-            className="flex flex-col items-center gap-[6px] border border-brass bg-brass px-[44px] py-[22px] text-near transition-colors hover:border-bronze hover:bg-bronze hover:text-cream"
-          >
-            <span className="eyebrow tracking-[0.176em]">
-              WhatsApp the studio
-            </span>
-            <Mizo>{mizo.whatsappCta}</Mizo>
-          </WhatsAppLink>
+        <Mizo variant="sentence" className="mt-[10px] block max-w-[620px]">
+          {mizo.whatsappCta}
+        </Mizo>
+
+        <div className="mt-[10px] flex flex-col items-stretch gap-[16px] tab:flex-row tab:items-start">
+          <WhatsAppButton location="home-contact" />
 
           <a
             href={`mailto:${studio.email}`}
-            className="flex items-center justify-center border border-ink px-[44px] py-[22px] text-ink transition-colors hover:border-bronze hover:text-bronze"
+            className="inline-flex min-h-[60px] items-center justify-center border border-ink px-[40px] py-[20px] text-ink transition-colors hover:border-bronze hover:text-bronze focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-bronze"
           >
-            <span className="eyebrow tracking-[0.176em]">Email us</span>
+            <span className="navlabel tracking-[0.176em]">Email us</span>
           </a>
         </div>
 

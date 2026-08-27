@@ -42,23 +42,23 @@ Brass on bone is low contrast. It is the house style for decorative eyebrow labe
 
 ## Type
 
-Cormorant Garamond (Light, Light Italic) for display. Jost (Light, Medium) for UI and body.
+Cormorant Garamond (Light, Light Italic, Regular) for display. Jost (Light, Regular, Medium) for UI and body. Body copy and eyebrows are set Regular; display headings stay Light.
 
 Import both with the `latin-ext` subset — not the default `latin`. Mizo needs U+1E6D (ṭ) and U+1E6C (Ṭ), which live outside the default subset and will silently fall back mid-word.
 
-Desktop scale after the type increase:
+Desktop scale after the type increase (the whole ramp was scaled a further 8%):
 
 | Role | Size | Family |
 | --- | --- | --- |
-| Hero display | 93.5 | Cormorant Light Italic |
-| Page title (stubs) | 80.5 | Cormorant Light |
-| Section heading | 46.5 | Cormorant Light |
-| Statement | 33.5 | Cormorant Light |
-| Product / service name | 24.5–31.5 | Cormorant Light |
-| Lead paragraph | 17.5–19 | Jost Light |
-| Body | 15.5 | Jost Light |
-| Nav | 12.5 | Jost Medium |
-| Eyebrow / small caps | 12.5, tracked 2.4 | Jost Light |
+| Hero display | 101 | Cormorant Light Italic |
+| Page title (stubs) | 87 | Cormorant Light |
+| Section heading | 50 | Cormorant Light |
+| Statement | 36 | Cormorant Light |
+| Product / service name | 26.5–34 | Cormorant Light |
+| Lead paragraph | 19 | Jost Regular |
+| Body | 17.3 | Jost Regular |
+| Nav | 13.5 | Jost Medium |
+| Eyebrow / small caps | 13.5, tracked 2.4 | Jost Regular |
 
 The scale is ad-hoc, not a ramp. Consolidate into tokens during the build rather than porting the exact numbers.
 

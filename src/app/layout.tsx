@@ -7,7 +7,7 @@ import "./globals.css";
 /* latin-ext, not latin: Mizo needs U+1E6D (ṭ) and U+1E6C (Ṭ), which fall
    outside the default subset and would silently fall back mid-word. */
 const cormorant = Cormorant_Garamond({
-  weight: ["300"],
+  weight: ["300", "400"],
   style: ["normal", "italic"],
   subsets: ["latin", "latin-ext"],
   variable: "--font-cormorant",
@@ -15,7 +15,7 @@ const cormorant = Cormorant_Garamond({
 });
 
 const jost = Jost({
-  weight: ["300", "500"],
+  weight: ["300", "400", "500"],
   subsets: ["latin", "latin-ext"],
   variable: "--font-jost",
   display: "swap",

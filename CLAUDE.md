@@ -69,7 +69,7 @@ The scale is ad-hoc, not a ramp. Consolidate into tokens during the build rather
 3. Statement — centred, brass rule
 4. ~~Gallery~~ — hidden pending photography, do not build yet
 5. Philosophy band — `near` ground, quote only, no attribution
-6. Products — eight tiles (Hettich, Brassage, Veneto, Häfele, VMZINC, Hardware, Glass Installations, Electric Fireplaces)
+6. Products — eight tiles (Hettich, Brassage, Häfele, Veneto, VMZINC, Hardware, Glass Installations, Electric Fireplaces)
 7. Services — three columns, hairline rules
 8. Contact — centred, brass primary button + outline secondary
 9. Footer — `wash` ground, logo, nav, legal line

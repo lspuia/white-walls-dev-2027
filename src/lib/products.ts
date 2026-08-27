@@ -47,17 +47,6 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    slug: "veneto",
-    name: "Veneto",
-    kind: "brand",
-    tagline: "Surfaces and finishes",
-    teaser:
-      "Placeholder — surfaces and finishes. Copy for this brand is still to come from the studio.",
-    body: [
-      "Placeholder. This page is in place so the Veneto range has a home; the studio will supply the description, the product scope and the supply terms.",
-    ],
-  },
-  {
     slug: "hafele",
     name: "Häfele",
     kind: "brand",
@@ -67,6 +56,17 @@ export const PRODUCTS: Product[] = [
     body: [
       "Häfele supplies furniture fittings, storage systems and appliances across a very wide catalogue.",
       "Placeholder. The studio will confirm which parts of the range it supplies and on what terms.",
+    ],
+  },
+  {
+    slug: "veneto",
+    name: "Veneto",
+    kind: "brand",
+    tagline: "Surfaces and finishes",
+    teaser:
+      "Placeholder — surfaces and finishes. Copy for this brand is still to come from the studio.",
+    body: [
+      "Placeholder. This page is in place so the Veneto range has a home; the studio will supply the description, the product scope and the supply terms.",
     ],
   },
   {

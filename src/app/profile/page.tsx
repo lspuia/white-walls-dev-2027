@@ -102,9 +102,11 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      {/* Inset dark band, closing the page on the studio's primary CTA. */}
-      <section className="shell pb-[var(--pad-y)]">
-        <div className="mx-auto flex max-w-[1030px] flex-col items-center gap-[30px] bg-near px-[var(--gutter)] py-[100px] text-center">
+      {/* Full-bleed dark band, closing the page on the studio's primary CTA.
+          Runs edge to edge and flush to the footer, like the philosophy band
+          on Home. */}
+      <section className="bg-near">
+        <div className="shell flex flex-col items-center gap-[30px] py-[100px] text-center">
           <Logo reversed className="w-[176px]" />
           <p className="max-w-[620px] font-display text-[length:var(--text-statement)] font-light italic leading-[1.5] text-cream">
             Tell us about your space.

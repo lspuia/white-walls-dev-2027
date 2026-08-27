@@ -69,12 +69,12 @@ The scale is ad-hoc, not a ramp. Consolidate into tokens during the build rather
 3. Statement — centred, brass rule
 4. ~~Gallery~~ — hidden pending photography, do not build yet
 5. Philosophy band — `near` ground, quote only, no attribution
-6. Products — six tiles (Hettich, Brassage, Crompton, Yale & Godrej, Häfele, Electric Fireplaces)
+6. Products — eight tiles (Hettich, Brassage, Veneto, Häfele, VMZINC, Hardware, Glass Installations, Electric Fireplaces)
 7. Services — three columns, hairline rules
 8. Contact — centred, brass primary button + outline secondary
 9. Footer — `wash` ground, logo, nav, legal line
 
-Desktop products render 6-across; tablet 3×2; mobile 2×3. Services are three columns on desktop, stacked on tablet and mobile. Mobile header has a hamburger, no visible nav — the menu overlay is not designed yet.
+Desktop products render 4-across (2 rows); tablet 3-across; mobile 2-across. Services are three columns on desktop, stacked on tablet and mobile. Mobile header has a hamburger, no visible nav — the menu overlay is not designed yet.
 
 ## Hard constraints
 
@@ -100,6 +100,6 @@ WhatsApp, not email forms. Results-first, then a click-to-WhatsApp CTA with a pr
 
 - Hero photograph is placed; needs a portrait crop for mobile (current centre-crop fails at 390)
 - Hero scrim is too light for the current pale photo — small text over it is unreadable
-- Six product tile images
+- Eight product tile images
 - Four project images, once the gallery returns
 - Reversed logo variant, if any dark section other than the philosophy band appears

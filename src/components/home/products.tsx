@@ -1,35 +1,17 @@
-const PRODUCTS = [
-  {
-    name: "Hettich",
-    caption: "Kitchen & furniture hardware",
-    tint: "rgb(197,185,168)",
-  },
-  {
-    name: "Brassage",
-    caption: "Custom brass ironmongery",
-    tint: "rgb(202,191,174)",
-  },
-  {
-    name: "Crompton",
-    caption: "Built-in kitchen appliances",
-    tint: "rgb(208,196,179)",
-  },
-  {
-    name: "Yale & Godrej",
-    caption: "Locks, safes, door hardware",
-    tint: "rgb(213,202,185)",
-  },
-  {
-    name: "Häfele",
-    caption: "Appliances, supplied to order",
-    tint: "rgb(219,207,190)",
-  },
-  {
-    name: "Fireplaces",
-    caption: "Electric, made to order",
-    tint: "rgb(224,213,196)",
-  },
-] as const;
+import Link from "next/link";
+import { PRODUCTS } from "@/lib/products";
+
+/** Tile tints, carried over from the Figma strip. */
+const TINTS = [
+  "rgb(197,185,168)",
+  "rgb(202,191,174)",
+  "rgb(208,196,179)",
+  "rgb(213,202,185)",
+  "rgb(219,207,190)",
+  "rgb(224,213,196)",
+  "rgb(212,200,183)",
+  "rgb(206,194,177)",
+];
 
 export function Products() {
   return (
@@ -47,24 +29,31 @@ export function Products() {
           </h2>
         </div>
 
-        {/* 2×3 mobile · 3×2 tablet · 6-across desktop */}
-        <ul className="grid grid-cols-2 gap-x-[20px] gap-y-[40px] tab:grid-cols-3 desk:grid-cols-6">
-          {PRODUCTS.map((product) => (
-            <li key={product.name} className="flex flex-col gap-[22px]">
-              {/* TODO(assets): replace with the product tile photograph. */}
-              <div
-                aria-hidden
-                className="aspect-[211/300] w-full"
-                style={{
-                  backgroundImage: `linear-gradient(117.85deg, ${product.tint} 0%, rgb(150,143,135) 42.857%, rgb(132,128,122) 71.429%)`,
-                }}
-              />
-              <h3 className="font-display text-[length:var(--text-product)] font-light leading-[1.18] text-ink">
-                {product.name}
-              </h3>
-              <p className="text-[length:var(--text-caption)] leading-[1.68] text-mute">
-                {product.caption}
-              </p>
+        {/* 2-across mobile · 3 tablet · 4 desktop */}
+        <ul className="grid grid-cols-2 gap-x-[20px] gap-y-[40px] tab:grid-cols-3 desk:grid-cols-4">
+          {PRODUCTS.map((product, i) => (
+            <li key={product.slug}>
+              <Link
+                href={`/products/${product.slug}`}
+                className="group flex flex-col gap-[22px]"
+              >
+                {/* TODO(assets): replace with the product tile photograph. */}
+                <div
+                  aria-hidden
+                  className="aspect-[211/300] w-full"
+                  style={{
+                    backgroundImage: `linear-gradient(117.85deg, ${
+                      TINTS[i % TINTS.length]
+                    } 0%, rgb(150,143,135) 42.857%, rgb(132,128,122) 71.429%)`,
+                  }}
+                />
+                <h3 className="font-display text-[length:var(--text-product)] font-light leading-[1.18] text-ink transition-colors group-hover:text-bronze">
+                  {product.name}
+                </h3>
+                <p className="text-[length:var(--text-caption)] leading-[1.68] text-mute">
+                  {product.tagline}
+                </p>
+              </Link>
             </li>
           ))}
         </ul>

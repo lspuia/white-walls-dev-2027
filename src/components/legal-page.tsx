@@ -103,7 +103,7 @@ export function LegalPage({
 
           <Link
             href="/contact"
-            className="eyebrow mt-[8px] tracking-[0.176em] text-bronze transition-colors hover:text-ink"
+            className="eyebrow mt-[8px] self-start tracking-[0.176em] text-bronze underline decoration-dotted decoration-from-font underline-offset-[6px] transition-colors hover:text-ink hover:decoration-ink"
           >
             Contact the studio
           </Link>

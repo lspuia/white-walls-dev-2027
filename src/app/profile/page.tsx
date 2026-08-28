@@ -29,6 +29,13 @@ export default function ProfilePage() {
               the first measured layout through to the last handle fitted.
             </p>
             <p className="text-[length:var(--text-lead)] leading-[1.8] text-soft">
+              Kim began her career in New Delhi at DeMuro Das — then known as
+              Urbanist — the luxury furniture and interior design studio
+              founded by Brian DeMuro and Puru Das, and a regular on the AD50.
+              Three years there, working to the standards of India&rsquo;s most
+              demanding clients, set the bar she still builds to.
+            </p>
+            <p className="text-[length:var(--text-lead)] leading-[1.8] text-soft">
               We design the whole room — the layout, the cabinetry, the hardware
               and the finish — and supply the fittings that hold it together.
               Custom kitchens are our specialism.
@@ -46,31 +53,27 @@ export default function ProfilePage() {
         />
       </section>
 
-      {/* Philosophy — mirrored: image left, text right. */}
+      {/* Philosophy — centred, matching the Our story block. */}
       <section
         aria-labelledby="philosophy-heading"
-        className="shell pt-[110px] pb-[var(--pad-y)]"
+        className="bg-bone pb-[var(--pad-y)]"
       >
-        <div className="grid gap-[48px] desk:grid-cols-12 desk:gap-x-[40px]">
-          <div className="desk:col-span-5">
-            <PlaceholderImage ratio="3/4" label="Recent interior" />
-          </div>
-
-          <div className="flex flex-col gap-[26px] desk:col-span-5 desk:col-start-8 desk:pt-[150px]">
-            <h2
-              id="philosophy-heading"
-              className="eyebrow tracking-[0.208em] text-bronze"
-            >
-              Philosophy
-            </h2>
-            <p className="text-[length:var(--text-body)] leading-[1.82] text-soft">
+        <div className="shell flex flex-col items-center gap-[20px] text-center">
+          <h2
+            id="philosophy-heading"
+            className="eyebrow tracking-[0.208em] text-bronze"
+          >
+            Philosophy
+          </h2>
+          <div className="flex max-w-[700px] flex-col gap-[20px]">
+            <p className="text-[length:var(--text-lead)] leading-[1.8] text-soft">
               We plan a room around how it is actually used — where the light
               falls, where people stand, what has to be within reach. The
               cabinetry is drawn to the space rather than ordered to a catalogue
               size, and the hardware is specified early, because it decides how
               a room feels every day.
             </p>
-            <p className="text-[length:var(--text-body)] leading-[1.82] text-soft">
+            <p className="text-[length:var(--text-lead)] leading-[1.8] text-soft">
               The result should be quiet. Nothing in a finished room ought to
               need explaining — the hinge, the handle and the light should all
               agree.

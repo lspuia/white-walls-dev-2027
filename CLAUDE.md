@@ -106,6 +106,12 @@ Two tiers. Short **labels** use the Jost Medium small-caps tier at roughly 60–
 
 Wrap every Mizo span in `lang="lus"` (Mizo has no two-letter ISO code). Copy is written by the owners, never machine-translated.
 
+## Retail
+
+White Walls **retails** the brands it carries. Products are sold direct — to builders, carpenters and homeowners — not only specified into the studio's own interior projects, and retail is intended to become the larger share of income. Product copy anywhere on the site must read as retail; never frame the range as inputs to the studio's own work.
+
+Authorised dealerships are held for Hettich and Brassage. Do not assert a dealership, certification or retail term for any other brand without the owners confirming it.
+
 ## Lead generation
 
 WhatsApp, not email forms. Results-first, then a click-to-WhatsApp CTA with a pre-filled message. Track WhatsApp clicks as the primary conversion.

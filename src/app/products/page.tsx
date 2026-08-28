@@ -7,19 +7,21 @@ import { PRODUCTS } from "@/lib/products";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Brands and categories supplied by White Walls — kitchen and furniture hardware, brass ironmongery, glass installations and electric fireplaces.",
+    "White Walls retails kitchen and furniture hardware, brass ironmongery, surfaces, glass installations and electric fireplaces from its studio in Aizawl — sold direct, not only into our own projects.",
 };
 
 export default function ProductsPage() {
   return (
     <>
-      <PageTitle eyebrow="Products & dealerships" title="Products" />
+      <PageTitle eyebrow="Retail & dealerships" title="Products" />
 
       <section className="bg-bone pb-[64px] tab:pb-[72px]">
         <div className="shell flex justify-center">
           <p className="max-w-[820px] text-center text-[length:var(--text-lead)] leading-[1.8] text-soft">
-            The fittings behind the finish. We specify and supply the hardware,
-            surfaces and fixtures that go into the rooms we design.
+            White Walls is a retailer as well as a design studio. We stock and
+            sell the brands below direct — to builders, carpenters and anyone
+            building or renovating, as well as into our own projects. You do
+            not need to be a design client to buy from us.
           </p>
         </div>
       </section>

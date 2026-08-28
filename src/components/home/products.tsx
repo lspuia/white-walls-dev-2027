@@ -19,14 +19,17 @@ export function Products() {
       <div className="shell flex flex-col gap-[52px] tab:gap-[76px]">
         <div className="flex flex-col items-center gap-[20px] text-center">
           <p className="eyebrow tracking-[0.208em] text-bronze">
-            Products &amp; Dealerships
+            Retail &amp; Dealerships
           </p>
           <h2
             id="products-heading"
             className="font-display text-[length:var(--text-heading)] font-light leading-[1.16] tracking-[-0.006em] text-ink"
           >
-            The fittings behind the finish
+            The brands we stock and sell
           </h2>
+          <p className="mt-[4px] max-w-[620px] text-[length:var(--text-body)] leading-[1.82] text-soft">
+            Sold direct from the studio, not only into the rooms we design.
+          </p>
         </div>
 
         {/* 2-across mobile · 3 tablet · 4 desktop */}

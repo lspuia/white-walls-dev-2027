@@ -16,7 +16,7 @@ export function WhatsAppBand({
   prefill?: string;
 }) {
   return (
-    <section className="bg-near">
+    <section data-whatsapp-band className="bg-near">
       <div className="shell flex flex-col items-center gap-[30px] py-[100px] text-center">
         <p className="max-w-[620px] font-display text-[length:var(--text-statement)] font-light italic leading-[1.5] text-cream">
           {line}

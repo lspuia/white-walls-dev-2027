@@ -5,6 +5,7 @@ import { PlaceholderImage } from "@/components/placeholder-image";
 import { WhatsAppBand } from "@/components/whatsapp-band";
 import { PRODUCTS, productBySlug } from "@/lib/products";
 import { ShopSocial } from "@/components/shop-social";
+import { WhatsAppFab } from "@/components/whatsapp-fab";
 
 /** Six slots per listing until the real ranges arrive. */
 const LISTING_SLOTS = ["01", "02", "03", "04", "05", "06"] as const;
@@ -100,6 +101,11 @@ export default async function ProductPage(
       </section>
 
       <ShopSocial />
+
+      <WhatsAppFab
+        location={`product-fab-${product.slug}`}
+        prefill={`Hello White Walls — I'd like to ask about ${product.name}. `}
+      />
 
       <WhatsAppBand
         location={`product-${product.slug}`}

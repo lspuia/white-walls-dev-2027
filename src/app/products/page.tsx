@@ -87,7 +87,11 @@ function ProductGroup({
                   {/* The whole tile is the link, but that is not visible at
                       rest — and on a phone there is no hover to reveal it. */}
                   <span className="eyebrow mt-[10px] inline-flex items-center gap-[8px] text-bronze transition-colors group-hover:text-ink">
-                    See more
+                    {/* The rule goes on the words, not the flex row — a
+                        text-decoration does not propagate into flex items. */}
+                    <span className="underline decoration-dotted decoration-1 underline-offset-[6px]">
+                      See more
+                    </span>
                     <span
                       aria-hidden
                       className="transition-transform group-hover:translate-x-[3px]"

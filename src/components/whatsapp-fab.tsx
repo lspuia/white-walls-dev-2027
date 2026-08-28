@@ -1,33 +1,35 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { WhatsAppLink } from "./whatsapp-link";
 import { WhatsAppGlyph } from "./whatsapp-glyph";
+import { productBySlug } from "@/lib/products";
+
+/** The legal pages carry no CTA. */
+const HIDDEN_ON = ["/privacy-policy", "/terms"];
 
 /**
- * Floating WhatsApp button for the product listing pages — long scrolls, so
- * the CTA stays in reach rather than only at the end. Square rather than a
- * circular FAB, to match the site's geometry.
+ * Floating WhatsApp button, mounted once in the root layout so every page
+ * carries it — except the legal pages, which have no CTA. Square rather than
+ * a circular FAB, to match the site's geometry.
  *
- * It retires once the closing WhatsApp band or the footer is on screen:
- * otherwise it duplicates the band's CTA and, at the very bottom, sits on top
- * of the footer's TERMS link. A scroll listener rather than an
- * IntersectionObserver, so the behaviour is testable in headless Chrome,
- * where IO callbacks do not fire.
+ * It retires once a real WhatsApp CTA or the footer is on screen: otherwise
+ * it duplicates that CTA and, at the very bottom, sits on top of the footer's
+ * TERMS link. A scroll listener rather than an IntersectionObserver, so the
+ * behaviour is testable in headless Chrome, where IO callbacks do not fire.
+ *
+ * Tracking and the prefilled message are derived from the route, so a product
+ * page still opens WhatsApp with that product named.
  */
-export function WhatsAppFab({
-  location,
-  prefill,
-}: {
-  location: string;
-  prefill?: string;
-}) {
+export function WhatsAppFab() {
+  const pathname = usePathname();
   const [atRealCta, setAtRealCta] = useState(false);
 
   useEffect(() => {
     const update = () => {
       const targets = document.querySelectorAll(
-        "[data-whatsapp-band], footer"
+        "[data-whatsapp-band], [data-whatsapp-cta], footer"
       );
       let onScreen = false;
       targets.forEach((target) => {
@@ -46,9 +48,20 @@ export function WhatsAppFab({
       window.removeEventListener("scroll", update);
       window.removeEventListener("resize", update);
     };
-  }, []);
+  }, [pathname]);
 
-  if (atRealCta) return null;
+  if (HIDDEN_ON.includes(pathname) || atRealCta) return null;
+
+  const product = pathname.startsWith("/products/")
+    ? productBySlug(pathname.slice("/products/".length))
+    : undefined;
+
+  const location = product
+    ? `fab-product-${product.slug}`
+    : `fab-${pathname === "/" ? "home" : pathname.replace(/^\//, "")}`;
+  const prefill = product
+    ? `Hello White Walls — I'd like to ask about ${product.name}. `
+    : undefined;
 
   return (
     <div className="pointer-events-none fixed inset-x-0 bottom-0 z-40 flex justify-end px-[var(--gutter)] pb-[calc(18px+env(safe-area-inset-bottom))]">

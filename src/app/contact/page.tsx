@@ -87,7 +87,7 @@ export default function ContactPage() {
               </ul>
             </Detail>
 
-            <div className="flex flex-col items-start gap-[16px]">
+            <div data-whatsapp-cta className="flex flex-col items-start gap-[16px]">
               <Mizo variant="sentence" className="block max-w-[420px]">
                 {mizo.whatsappCta}
               </Mizo>

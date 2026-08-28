@@ -27,9 +27,14 @@ export default function ProductsPage() {
       {/* Card grid, matching the Interiors page. */}
       <section aria-label="Products and dealerships" className="bg-bone pb-[var(--pad-y)]">
         <div className="shell">
-          <ul className="grid grid-cols-1 gap-x-[34px] gap-y-[52px] tab:grid-cols-2 desk:grid-cols-3">
+          {/* flex-wrap rather than grid: with 8 cards the last row holds 2, and
+              justify-center centres them. Full rows still fill exactly. */}
+          <ul className="flex flex-wrap justify-center gap-x-[34px] gap-y-[52px]">
             {PRODUCTS.map((product) => (
-              <li key={product.slug}>
+              <li
+                key={product.slug}
+                className="basis-full tab:basis-[calc((100%-34px)/2)] desk:basis-[calc((100%-68px)/3)]"
+              >
                 <Link
                   href={`/products/${product.slug}`}
                   className="group flex h-full flex-col gap-[18px]"

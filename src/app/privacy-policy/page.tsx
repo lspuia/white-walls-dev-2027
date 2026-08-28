@@ -7,8 +7,9 @@ export const metadata: Metadata = {
     "How White Walls collects, uses and protects information when you visit whitewalls.in or contact the studio.",
 };
 
-/** Carried over from the live site at whitewalls.in/privacy-policy. */
-const LAST_UPDATED = "April 2026";
+/** Text carried over from the live site; date bumped for the contact
+    details revision. */
+const LAST_UPDATED = "August 2026";
 
 const SECTIONS: LegalSection[] = [
   {

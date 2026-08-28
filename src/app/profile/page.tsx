@@ -30,10 +30,10 @@ export default function ProfilePage() {
             </p>
             <p className="text-[length:var(--text-lead)] leading-[1.8] text-soft">
               Kim began her career in New Delhi at DeMuro Das — then known as
-              Urbanist — the luxury furniture and interior design studio
-              founded by Brian DeMuro and Puru Das, and a regular on the AD50.
-              Three years there, working to the standards of India&rsquo;s most
-              demanding clients, set the bar she still builds to.
+              Urbanist — a luxury furniture and interior design studio, and a
+              regular on the AD50. Three years there, working to the standards
+              of India&rsquo;s most demanding clients, set the bar she still
+              builds to.
             </p>
             <p className="text-[length:var(--text-lead)] leading-[1.8] text-soft">
               We design the whole room — the layout, the cabinetry, the hardware

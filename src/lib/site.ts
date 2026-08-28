@@ -90,7 +90,7 @@ export function whatsappHref(prefill: string = WHATSAPP_PREFILL): string {
 export const mizo = {
   contactLead: null,
   // Supplied by the owners, verbatim.
-  whatsappCta: "Whatsapp ah kan biak theih reng e",
+  whatsappCta: "Whatsapp ah kan biak theih reng e!",
   footerAddress: null,
 } satisfies Record<string, string | null>;
 

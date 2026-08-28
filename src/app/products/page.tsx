@@ -137,7 +137,7 @@ export default function ProductsPage() {
       <ProductGroup
         id="categories"
         heading="Categories"
-        blurb="Categories we supply."
+        blurb="Supplied across brands, and fitted where the work calls for it."
         items={PRODUCTS.filter((product) => product.kind === "category")}
       />
 

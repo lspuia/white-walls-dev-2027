@@ -130,7 +130,7 @@ export default function ProductsPage() {
       <ProductGroup
         id="brands"
         heading="Brands"
-        blurb="Brands we supply."
+        blurb="Manufacturers we supply direct, to trade and to homeowners alike."
         items={PRODUCTS.filter((product) => product.kind === "brand")}
       />
 

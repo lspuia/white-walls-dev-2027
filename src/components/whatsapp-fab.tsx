@@ -57,7 +57,7 @@ export function WhatsAppFab({
         prefill={prefill}
         className="pointer-events-auto inline-flex min-h-[56px] items-center gap-[10px] border border-bronze bg-brass px-[20px] py-[16px] text-near shadow-[0_6px_20px_-6px_rgba(26,23,20,0.45)] transition-[background-color,color,transform] hover:-translate-y-px hover:bg-bronze hover:text-cream focus-visible:outline-2 focus-visible:outline-offset-[3px] focus-visible:outline-bronze"
       >
-        <WhatsAppGlyph className="h-[22px] w-[22px]" />
+        <WhatsAppGlyph brand className="h-[22px] w-[22px]" />
         <span className="navlabel tracking-[0.14em]">WhatsApp</span>
         <span className="sr-only"> the studio</span>
       </WhatsAppLink>

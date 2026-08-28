@@ -10,62 +10,40 @@ export const metadata: Metadata = {
     "White Walls is an interior design studio in Aizawl, Mizoram, led by Liansangkimi Pachuau. Residential and commercial interiors, custom kitchens and hardware supply since 2017.",
 };
 
-/** Authorised dealerships — the factual equivalent of a press list. */
-const DEALERSHIPS = [
-  "Hettich",
-  "Brassage",
-  "Crompton",
-  "Yale & Godrej",
-  "Häfele",
-] as const;
-
 export default function ProfilePage() {
   return (
     <>
       <PageTitle eyebrow="The studio" title="Profile" />
 
-      {/* Our story — text left, portrait right. Image is top-aligned and the
-          text column drops, per the reference rhythm. */}
-      <section aria-labelledby="story-heading" className="shell pt-[80px]">
-        <div className="grid gap-[48px] desk:grid-cols-12 desk:gap-x-[40px]">
-          <div className="order-2 flex flex-col gap-[26px] desk:order-1 desk:col-span-5 desk:pt-[110px]">
-            <h2
-              id="story-heading"
-              className="eyebrow tracking-[0.208em] text-bronze"
-            >
-              Our story
-            </h2>
-            <p className="text-[length:var(--text-body)] leading-[1.82] text-soft">
+      {/* Our story — centred intro, matching the Interiors page. */}
+      <section aria-labelledby="story-heading" className="bg-bone pb-[56px] tab:pb-[64px]">
+        <div className="shell flex flex-col items-center gap-[20px] text-center">
+          <h2 id="story-heading" className="eyebrow tracking-[0.208em] text-bronze">
+            Our story
+          </h2>
+          <div className="flex max-w-[700px] flex-col gap-[20px]">
+            <p className="text-[length:var(--text-lead)] leading-[1.8] text-soft">
               White Walls is an interior design studio in Aizawl, working across
               residential and commercial interiors since {studio.since}. The
               studio is led by {studio.proprietor}, who works with clients from
               the first measured layout through to the last handle fitted.
             </p>
-            <p className="text-[length:var(--text-body)] leading-[1.82] text-soft">
+            <p className="text-[length:var(--text-lead)] leading-[1.8] text-soft">
               We design the whole room — the layout, the cabinetry, the hardware
               and the finish — and supply the fittings that hold it together.
               Custom kitchens are our specialism.
             </p>
-
-            <p className="mt-[18px] text-[length:var(--text-body)] leading-[1.82] text-soft">
-              Authorised dealerships:
-            </p>
-            <ul className="flex flex-col gap-[6px]">
-              {DEALERSHIPS.map((name) => (
-                <li
-                  key={name}
-                  className="text-[length:var(--text-body)] leading-[1.68] text-bronze"
-                >
-                  {name}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="order-1 desk:order-2 desk:col-span-5 desk:col-start-8">
-            <PlaceholderImage ratio="2/3" label="Kim at the studio" />
           </div>
         </div>
+      </section>
+
+      {/* Portrait, centred under the intro. */}
+      <section className="shell pb-[72px] tab:pb-[88px]">
+        <PlaceholderImage
+          ratio="2/3"
+          label="Kim at the studio"
+          className="mx-auto w-full max-w-[460px]"
+        />
       </section>
 
       {/* Philosophy — mirrored: image left, text right. */}

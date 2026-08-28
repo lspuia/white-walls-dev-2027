@@ -23,8 +23,10 @@ export type Product = {
   teaser: string;
   /** Body paragraphs on the inner page. */
   body: string[];
-  /** Brand lockup for the Products index. Brands only; categories have none. */
+  /** Brand lockup for the Products index. Brands only. */
   logo?: { src: string; width: number; height: number };
+  /** Category photograph for the Products index. Categories only. */
+  photo?: string;
 };
 
 export const PRODUCTS: Product[] = [
@@ -114,6 +116,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "hardware",
+    photo: "/img/categories/hardware.webp",
     name: "Hardware",
     kind: "category",
     tagline: "Locks, handles and door furniture",
@@ -126,6 +129,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "glass-installations",
+    photo: "/img/categories/glass-installations.webp",
     name: "Glass Installations",
     kind: "category",
     tagline: "Partitions, screens and glazed panels",
@@ -138,6 +142,7 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "electric-fireplaces",
+    photo: "/img/categories/electric-fireplaces.webp",
     name: "Electric Fireplaces",
     kind: "category",
     tagline: "Electric, made to order",

@@ -60,6 +60,17 @@ function ProductGroup({
                       className="max-h-[72px] w-auto max-w-full object-contain"
                     />
                   </div>
+                ) : product.photo ? (
+                  /* Category tiles carry a real photograph, cover-cropped. */
+                  <div className="relative aspect-[3/4] w-full overflow-hidden bg-sand">
+                    <Image
+                      src={product.photo}
+                      alt={product.name}
+                      fill
+                      sizes="(min-width: 1200px) 33vw, (min-width: 834px) 50vw, calc(100vw - 48px)"
+                      className="object-cover"
+                    />
+                  </div>
                 ) : (
                   <PlaceholderImage ratio="3/4" label={product.name} />
                 )}

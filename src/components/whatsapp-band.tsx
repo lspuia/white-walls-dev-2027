@@ -21,7 +21,7 @@ export function WhatsAppBand({
         <p className="max-w-[620px] font-display text-[length:var(--text-statement)] font-light italic leading-[1.5] text-cream">
           {line}
         </p>
-        <Mizo variant="sentence" tone="dark" className="max-w-[560px]">
+        <Mizo variant="sentence" tone="dark" size="lead" className="max-w-[560px]">
           {mizo.whatsappCta}
         </Mizo>
         <WhatsAppButton location={location} prefill={prefill} />

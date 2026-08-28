@@ -100,7 +100,9 @@ Desktop products render 4-across (2 rows); tablet 3-across; mobile 2-across. Ser
 
 ## Bilingual
 
-English carries structure. Mizo appears only at points of contact — contact section, WhatsApp CTA, footer address — set in the Jost Medium small-caps label tier at `bronze`, roughly 60–70% of the adjacent English size. Never the same sentence twice at the same weight.
+English carries structure. Mizo appears only at points of contact — contact section, WhatsApp CTA, footer address. Never the same sentence twice at the same weight.
+
+Two tiers. Short **labels** use the Jost Medium small-caps tier at roughly 60–70% of the adjacent English size. Full **sentences** are set at the same size, weight and leading as the body copy around them, so only the colour marks them as Mizo — a 70-character sentence in tracked small caps is unreadable. Colour is `bronze` on light grounds and `brass` on dark, where bronze measures 3.7:1.
 
 Wrap every Mizo span in `lang="lus"` (Mizo has no two-letter ISO code). Copy is written by the owners, never machine-translated.
 

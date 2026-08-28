@@ -117,14 +117,13 @@ body {
   line-height: 1.4;
 }
 
-/* Mizo sentence tier. Same voice, but a full sentence is not a label —
-   uppercasing 70-odd characters of Mizo hurts legibility, so this keeps the
-   owners' sentence case and only lightly tracks it. */
+/* Mizo sentence tier. A full sentence is not a label: it is set at the same
+   size, weight and leading as the body copy around it, so only the colour
+   marks it as Mizo. The uppercase label tier above is for short labels. */
 @utility mizo-sentence {
-  font-weight: 500;
-  font-size: 0.813rem;
-  letter-spacing: 0.06em;
-  line-height: 1.6;
+  font-weight: 400;
+  letter-spacing: normal;
+  line-height: 1.82;
 }
 
 @media (prefers-reduced-motion: reduce) {

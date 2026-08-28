@@ -19,7 +19,7 @@ export function Contact() {
           <Mizo className="mt-[14px] block">{mizo.contactLead}</Mizo>
         </p>
 
-        <Mizo variant="sentence" className="mt-[10px] block max-w-[620px]">
+        <Mizo variant="sentence" size="lead" className="mt-[10px] block max-w-[620px]">
           {mizo.whatsappCta}
         </Mizo>
 

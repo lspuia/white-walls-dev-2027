@@ -42,7 +42,7 @@ export default function ProfilePage() {
               the first measured layout through to the last handle fitted.
             </p>
             <p className="text-[length:var(--text-body)] leading-[1.82] text-soft">
-              We design the whole room — the layout, the joinery, the hardware
+              We design the whole room — the layout, the cabinetry, the hardware
               and the finish — and supply the fittings that hold it together.
               Custom kitchens are our specialism.
             </p>
@@ -88,7 +88,7 @@ export default function ProfilePage() {
             <p className="text-[length:var(--text-body)] leading-[1.82] text-soft">
               We plan a room around how it is actually used — where the light
               falls, where people stand, what has to be within reach. The
-              joinery is drawn to the space rather than ordered to a catalogue
+              cabinetry is drawn to the space rather than ordered to a catalogue
               size, and the hardware is specified early, because it decides how
               a room feels every day.
             </p>

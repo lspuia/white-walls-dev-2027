@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s — White Walls",
   },
   description:
-    "Interior design studio in Aizawl, Mizoram. We design the whole room — the layout, the joinery, the hardware and the finish — and supply the fittings that hold it together.",
+    "Interior design studio in Aizawl, Mizoram. We design the whole room — the layout, the cabinetry, the hardware and the finish — and supply the fittings that hold it together.",
   openGraph: {
     type: "website",
     locale: "en_IN",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     url: "https://whitewalls.in",
     title: "White Walls — Interior Design Studio, Aizawl",
     description:
-      "Interior design, joinery and hardware — one studio, whole rooms, since 2017.",
+      "Interior design, cabinetry and hardware — one studio, whole rooms, since 2017.",
   },
 };
 

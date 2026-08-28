@@ -2,7 +2,7 @@ const SERVICES = [
   {
     n: "01",
     name: "Interior Design",
-    body: "Full-scope residential and commercial design — planning, drawings, joinery detailing and site supervision.",
+    body: "Full-scope residential and commercial design — planning, drawings, cabinetry detailing and site supervision.",
   },
   {
     n: "02",

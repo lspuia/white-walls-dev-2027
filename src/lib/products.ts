@@ -43,7 +43,7 @@ export const PRODUCTS: Product[] = [
       "Custom brass ironmongery — handles, pulls and door furniture made to order. White Walls is an authorised dealer.",
     body: [
       "Brassage produces solid brass ironmongery to order: handles, pulls, hooks and door furniture, in a range of finishes that age rather than wear.",
-      "Because the pieces are made to order, they are specified early and drawn into the joinery, not chosen at the end from what is in stock.",
+      "Because the pieces are made to order, they are specified early and drawn into the cabinetry, not chosen at the end from what is in stock.",
     ],
   },
   {
@@ -97,11 +97,11 @@ export const PRODUCTS: Product[] = [
     slug: "glass-installations",
     name: "Glass Installations",
     kind: "category",
-    tagline: "Partitions, screens and glazed joinery",
+    tagline: "Partitions, screens and glazed panels",
     teaser:
       "Glazed partitions, screens and shower enclosures, measured and installed by the studio.",
     body: [
-      "Glass is used to divide space without closing it — partitions, screens, shower enclosures and glazed joinery.",
+      "Glass is used to divide space without closing it — partitions, screens, shower enclosures and glazed panels.",
       "Placeholder. The studio will confirm the systems, the glass specifications and the installation scope.",
     ],
   },
@@ -111,9 +111,9 @@ export const PRODUCTS: Product[] = [
     kind: "category",
     tagline: "Electric, made to order",
     teaser:
-      "Electric fireplaces, made to order and built into the joinery rather than stood in front of it.",
+      "Electric fireplaces, made to order and built into the cabinetry rather than stood in front of it.",
     body: [
-      "Electric fireplaces are made to order and detailed into the surrounding joinery, so the unit reads as part of the room rather than an appliance placed in it.",
+      "Electric fireplaces are made to order and detailed into the surrounding cabinetry, so the unit reads as part of the room rather than an appliance placed in it.",
       "Placeholder. The studio will confirm the models offered and the lead times.",
     ],
   },

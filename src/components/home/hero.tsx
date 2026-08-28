@@ -50,7 +50,7 @@ export function Hero() {
           their quiet.
         </h1>
         <p className="relative max-w-[640px] text-[length:var(--text-lead)] leading-[1.8] tracking-[0.011em] text-haze">
-          Interior design, joinery and hardware — one studio, whole rooms, since{" "}
+          Interior design, cabinetry and hardware — one studio, whole rooms, since{" "}
           {studio.since}.
         </p>
       </div>

@@ -44,7 +44,7 @@ export const PRODUCTS: Product[] = [
       "German kitchen and furniture hardware — hinges, drawer runners and sliding systems. We are an authorised Hettich dealer and sell the range direct, whether or not we are designing the room.",
     body: [
       "Hettich makes the moving parts of a kitchen: the hinges, the drawer runners, the lift systems and the sliding gear. They are the parts nobody looks at and everybody touches, several times a day, for years.",
-      "We hold an authorised Hettich dealership and sell the range direct — to builders, carpenters and homeowners, as well as into our own projects. Tell us the sizes and we will quote.",
+      "We hold an authorised Hettich dealership and sell the range direct — to homeowners across Mizoram as well as to builders and carpenters. Tell us the sizes and we will quote, and we ship.",
     ],
   },
   {

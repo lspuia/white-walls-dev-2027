@@ -108,7 +108,9 @@ Wrap every Mizo span in `lang="lus"` (Mizo has no two-letter ISO code). Copy is 
 
 ## Retail
 
-White Walls **retails** the brands it carries. Products are sold direct — to builders, carpenters and homeowners — not only specified into the studio's own interior projects, and retail is intended to become the larger share of income. Product copy anywhere on the site must read as retail; never frame the range as inputs to the studio's own work.
+White Walls **retails** the brands it carries. Products are sold direct — not only specified into the studio's own interior projects — and retail is intended to become the larger share of income.
+
+The **primary retail audience is homeowners across Mizoram**, reached through online campaigns, and the studio **ships statewide**. Builders and carpenters are secondary. Lead with homeowners, not trade. Product copy anywhere on the site must read as retail; never frame the range as inputs to the studio's own work.
 
 **Most brands are not held in stock — they are supplied to order.** Say "supply" and "to order", not "stock" or "in stock", unless the owners confirm a line is actually held.
 

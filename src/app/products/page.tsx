@@ -84,6 +84,17 @@ function ProductGroup({
                   <p className="mt-[4px] text-[length:var(--text-body)] leading-[1.82] text-soft">
                     {product.teaser}
                   </p>
+                  {/* The whole tile is the link, but that is not visible at
+                      rest — and on a phone there is no hover to reveal it. */}
+                  <span className="eyebrow mt-[10px] inline-flex items-center gap-[8px] text-bronze transition-colors group-hover:text-ink">
+                    See more
+                    <span
+                      aria-hidden
+                      className="transition-transform group-hover:translate-x-[3px]"
+                    >
+                      &rarr;
+                    </span>
+                  </span>
                 </div>
               </Link>
             </li>

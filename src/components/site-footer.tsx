@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Logo } from "./logo";
 import { Mizo } from "./mizo";
-import { NAV, SOCIAL, studio, mizo } from "@/lib/site";
+import { SocialButtons } from "./social-buttons";
+import { NAV, studio, mizo } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -11,10 +12,12 @@ export function SiteFooter() {
           <Logo className="w-[177px] tab:w-[150px] desk:w-[176px]" />
         </Link>
 
-        <p className="mt-[16px] eyebrow text-[length:var(--text-legal)] tracking-[0.117em] text-soft text-center">
+        <p className="mt-[20px] eyebrow text-[length:var(--text-legal)] tracking-[0.117em] text-soft text-center">
           {studio.city.toUpperCase()}
           <Mizo className="mt-[6px] block">{mizo.footerAddress}</Mizo>
         </p>
+
+        <SocialButtons className="mt-[26px] justify-center" />
 
         <nav
           aria-label="Footer"
@@ -29,17 +32,6 @@ export function SiteFooter() {
               {item.label}
             </Link>
           ))}
-          {SOCIAL.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              target="_blank"
-              rel="noreferrer noopener"
-              className="transition-colors hover:text-bronze"
-            >
-              {item.label}
-            </a>
-          ))}
         </nav>
 
         <hr className="mt-[60px] h-px w-full border-0 bg-rule" />
@@ -47,7 +39,6 @@ export function SiteFooter() {
         <div className="mt-[28px] flex w-full flex-col items-center gap-[12px] text-center text-[length:var(--text-legal)] tracking-[0.117em] text-mute tab:flex-row tab:justify-between tab:text-left">
           <p>
             © {studio.name.toUpperCase()} {new Date().getFullYear()}
-            {"  ·  "}GSTIN {studio.gstin}
           </p>
           {/* Not yet routed — set as text, as in the Figma frame. */}
           <p>PRIVACY{"  ·  "}TERMS</p>

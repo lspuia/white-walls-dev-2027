@@ -18,7 +18,6 @@ export const SOCIAL = [
 export const studio = {
   name: "White Walls",
   legalName: "White Walls Interior Design Studio",
-  gstin: "15BABPP7051A1Z6",
   proprietor: "Liansangkimi Pachuau",
   city: "Aizawl, Mizoram",
   hours: "Monday–Saturday, 9:30–18:00",

@@ -2,7 +2,7 @@
 
 Interior design studio, Aizawl, Mizoram. Next.js rebuild of the marketing site.
 
-Proprietor: Liansangkimi Pachuau (Kim). GSTIN 15BABPP7051A1Z6.
+Proprietor: Liansangkimi Pachuau (Kim).
 
 ## Stack
 

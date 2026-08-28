@@ -48,8 +48,9 @@ export function SiteFooter() {
               PRIVACY
             </Link>
             <span aria-hidden>·</span>
-            {/* TERMS has no page yet — text until it does. */}
-            <span>TERMS</span>
+            <Link href="/terms" className="transition-colors hover:text-bronze">
+              TERMS
+            </Link>
           </p>
         </div>
       </div>

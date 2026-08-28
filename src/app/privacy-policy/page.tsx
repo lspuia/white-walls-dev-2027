@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { PageTitle } from "@/components/page-title";
-import { studio, contact } from "@/lib/site";
+import { LegalPage, type LegalSection } from "@/components/legal-page";
 
 export const metadata: Metadata = {
   title: "Privacy Policy",
@@ -12,9 +10,7 @@ export const metadata: Metadata = {
 /** Carried over from the live site at whitewalls.in/privacy-policy. */
 const LAST_UPDATED = "April 2026";
 
-type Section = { heading: string; body: (string | string[])[] };
-
-const SECTIONS: Section[] = [
+const SECTIONS: LegalSection[] = [
   {
     heading: "1. Information We Collect",
     body: [
@@ -94,94 +90,13 @@ const SECTIONS: Section[] = [
 
 export default function PrivacyPolicyPage() {
   return (
-    <>
-      <PageTitle eyebrow="Legal" title="Privacy Policy" />
-
-      <section className="shell pb-[var(--pad-y)]">
-        <div className="mx-auto flex max-w-[760px] flex-col gap-[36px]">
-          <p className="eyebrow tracking-[0.176em] text-mute">
-            Last updated: {LAST_UPDATED}
-          </p>
-
-          <p className="text-[length:var(--text-body)] leading-[1.82] text-soft">
-            White Walls (“we”, “our”, or “us”) operates the website
-            whitewalls.in. This Privacy Policy explains how we collect, use, and
-            protect information when you visit our website or contact us for
-            interior design services. By using our website, you agree to the
-            practices described in this policy.
-          </p>
-
-          {SECTIONS.map((section) => (
-            <div key={section.heading} className="flex flex-col gap-[16px]">
-              <h2 className="font-display text-[length:var(--text-product)] font-light leading-[1.25] text-ink">
-                {section.heading}
-              </h2>
-              {section.body.map((block, i) =>
-                Array.isArray(block) ? (
-                  <ul
-                    key={i}
-                    className="flex list-disc flex-col gap-[8px] pl-[22px] text-[length:var(--text-body)] leading-[1.82] text-soft marker:text-brass"
-                  >
-                    {block.map((item) => (
-                      <li key={item}>{item}</li>
-                    ))}
-                  </ul>
-                ) : (
-                  <p
-                    key={i}
-                    className="text-[length:var(--text-body)] leading-[1.82] text-soft"
-                  >
-                    {block}
-                  </p>
-                )
-              )}
-            </div>
-          ))}
-
-          <div className="flex flex-col gap-[16px]">
-            <h2 className="font-display text-[length:var(--text-product)] font-light leading-[1.25] text-ink">
-              10. Contact Us
-            </h2>
-            <p className="text-[length:var(--text-body)] leading-[1.82] text-soft">
-              If you have any questions or concerns about this Privacy Policy or
-              how we handle your information, please get in touch:
-            </p>
-            <address className="not-italic text-[length:var(--text-body)] leading-[1.82] text-soft">
-              <p>{studio.name}</p>
-              <p>{contact.address.line1}</p>
-              <p>{contact.address.line2}</p>
-              <p className="mt-[10px]">
-                {contact.phones.map((phone, i) => (
-                  <span key={phone.dial}>
-                    {i > 0 && <span aria-hidden> / </span>}
-                    <a
-                      href={`tel:${phone.dial}`}
-                      className="transition-colors hover:text-bronze"
-                    >
-                      {phone.display}
-                    </a>
-                  </span>
-                ))}
-              </p>
-              <p>
-                <a
-                  href={`mailto:${studio.email}`}
-                  className="transition-colors hover:text-bronze"
-                >
-                  {studio.email}
-                </a>
-              </p>
-            </address>
-          </div>
-
-          <Link
-            href="/contact"
-            className="eyebrow mt-[8px] tracking-[0.176em] text-bronze transition-colors hover:text-ink"
-          >
-            Contact the studio
-          </Link>
-        </div>
-      </section>
-    </>
+    <LegalPage
+      title="Privacy Policy"
+      lastUpdated={LAST_UPDATED}
+      intro="White Walls (“we”, “our”, or “us”) operates the website whitewalls.in. This Privacy Policy explains how we collect, use, and protect information when you visit our website or contact us for interior design services. By using our website, you agree to the practices described in this policy."
+      sections={SECTIONS}
+      contactHeading="10. Contact Us"
+      contactIntro="If you have any questions or concerns about this Privacy Policy or how we handle your information, please get in touch:"
+    />
   );
 }

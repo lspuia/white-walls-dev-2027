@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { PageTitle } from "@/components/page-title";
 import { PlaceholderImage } from "@/components/placeholder-image";
-import { PRODUCTS } from "@/lib/products";
+import { PRODUCTS, type Product } from "@/lib/products";
 import { ShopSocial } from "@/components/shop-social";
 
 export const metadata: Metadata = {
@@ -10,6 +10,63 @@ export const metadata: Metadata = {
   description:
     "White Walls retails kitchen and furniture hardware, brass ironmongery, surfaces, glass installations and electric fireplaces from its studio in Aizawl — sold direct, not only into our own projects.",
 };
+
+function ProductGroup({
+  id,
+  heading,
+  blurb,
+  items,
+}: {
+  id: string;
+  heading: string;
+  blurb: string;
+  items: Product[];
+}) {
+  return (
+    <section aria-labelledby={`${id}-heading`} className="bg-bone pb-[72px]">
+      <div className="shell">
+        <div className="flex flex-col items-center gap-[10px] pb-[40px] text-center">
+          <h2
+            id={`${id}-heading`}
+            className="font-display text-[length:var(--text-service)] font-light leading-[1.18] text-ink"
+          >
+            {heading}
+          </h2>
+          <p className="text-[length:var(--text-caption)] leading-[1.68] text-mute">
+            {blurb}
+          </p>
+        </div>
+
+        <ul className="flex flex-wrap justify-center gap-x-[34px] gap-y-[52px]">
+          {items.map((product) => (
+            <li
+              key={product.slug}
+              className="basis-full tab:basis-[calc((100%-34px)/2)] desk:basis-[calc((100%-68px)/3)]"
+            >
+              <Link
+                href={`/products/${product.slug}`}
+                className="group flex h-full flex-col gap-[18px]"
+              >
+                <PlaceholderImage ratio="3/4" label={product.name} />
+                <div className="flex flex-col gap-[10px]">
+                  <h3 className="font-display text-[length:var(--text-service)] font-light leading-[1.18] text-ink transition-colors group-hover:text-bronze">
+                    {product.name}
+                  </h3>
+                  <p className="text-[length:var(--text-caption)] leading-[1.68] text-mute">
+                    {product.tagline}
+                  </p>
+                  <p className="mt-[4px] text-[length:var(--text-body)] leading-[1.82] text-soft">
+                    {product.teaser}
+                  </p>
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+}
 
 export default function ProductsPage() {
   return (
@@ -27,42 +84,21 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Card grid, matching the Interiors page. */}
-      <section aria-label="Products and dealerships" className="bg-bone pb-[var(--pad-y)]">
-        <div className="shell">
-          {/* flex-wrap rather than grid: with 8 cards the last row holds 2, and
-              justify-center centres them. Full rows still fill exactly. */}
-          <ul className="flex flex-wrap justify-center gap-x-[34px] gap-y-[52px]">
-            {PRODUCTS.map((product) => (
-              <li
-                key={product.slug}
-                className="basis-full tab:basis-[calc((100%-34px)/2)] desk:basis-[calc((100%-68px)/3)]"
-              >
-                <Link
-                  href={`/products/${product.slug}`}
-                  className="group flex h-full flex-col gap-[18px]"
-                >
-                  <PlaceholderImage ratio="3/4" label={product.name} />
-                  <div className="flex flex-col gap-[10px]">
-                    <p className="eyebrow tracking-[0.208em] text-bronze">
-                      {product.kind === "brand" ? "Brand" : "Category"}
-                    </p>
-                    <h2 className="font-display text-[length:var(--text-service)] font-light leading-[1.18] text-ink transition-colors group-hover:text-bronze">
-                      {product.name}
-                    </h2>
-                    <p className="text-[length:var(--text-caption)] leading-[1.68] text-mute">
-                      {product.tagline}
-                    </p>
-                    <p className="mt-[4px] text-[length:var(--text-body)] leading-[1.82] text-soft">
-                      {product.teaser}
-                    </p>
-                  </div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </section>
+      {/* Brands and categories are shown as separate groups; the section
+          heading carries the kind, so the cards no longer label it. */}
+      <ProductGroup
+        id="brands"
+        heading="Brands"
+        blurb="Manufacturers we stock and supply."
+        items={PRODUCTS.filter((product) => product.kind === "brand")}
+      />
+
+      <ProductGroup
+        id="categories"
+        heading="Categories"
+        blurb="Supplied across brands, and fitted where the work calls for it."
+        items={PRODUCTS.filter((product) => product.kind === "category")}
+      />
 
       <ShopSocial />
     </>

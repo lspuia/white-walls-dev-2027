@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageTitle } from "@/components/page-title";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { PRODUCTS } from "@/lib/products";
+import { ShopSocial } from "@/components/shop-social";
 
 export const metadata: Metadata = {
   title: "Products",
@@ -62,6 +63,8 @@ export default function ProductsPage() {
           </ul>
         </div>
       </section>
+
+      <ShopSocial />
     </>
   );
 }

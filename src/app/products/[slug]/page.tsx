@@ -5,6 +5,7 @@ import { PageTitle } from "@/components/page-title";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { WhatsAppBand } from "@/components/whatsapp-band";
 import { PRODUCTS, productBySlug } from "@/lib/products";
+import { ShopSocial } from "@/components/shop-social";
 
 /** Six slots per listing until the real ranges arrive. */
 const LISTING_SLOTS = ["01", "02", "03", "04", "05", "06"] as const;
@@ -106,6 +107,8 @@ export default async function ProductPage(
           </Link>
         </div>
       </section>
+
+      <ShopSocial />
 
       <WhatsAppBand
         location={`product-${product.slug}`}

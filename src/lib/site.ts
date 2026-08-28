@@ -9,11 +9,28 @@ export const NAV = [
 /** Header nav: Home is dropped — the logo is the home link. */
 export const HEADER_NAV = NAV.filter((item) => item.href !== "/");
 
-export const SOCIAL = [
-  // TODO(owners): confirm the live handles before launch.
-  { href: "https://www.instagram.com/", label: "Instagram" },
-  { href: "https://www.facebook.com/", label: "Facebook" },
-] as const;
+/**
+ * Two sets of accounts: the studio's own, and the retail/products pages.
+ * The footer carries `studio` sitewide; the Products pages carry `products`.
+ */
+export const SOCIAL = {
+  studio: [
+    { href: "https://www.instagram.com/whitewallsaizawl/", label: "Instagram" },
+    { href: "https://www.facebook.com/WhiteWallsAizawl", label: "Facebook" },
+  ],
+  products: [
+    {
+      href: "https://www.instagram.com/whitewallsaizawl_products",
+      label: "Instagram",
+    },
+    {
+      href: "https://www.facebook.com/whitewallsaizawlproducts/",
+      label: "Facebook",
+    },
+  ],
+} as const;
+
+export type SocialLink = { href: string; label: string };
 
 export const studio = {
   name: "White Walls",

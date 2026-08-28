@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Logo } from "./logo";
 import { Mizo } from "./mizo";
 import { SocialButtons } from "./social-buttons";
-import { NAV, studio, mizo } from "@/lib/site";
+import { NAV, SOCIAL, studio, mizo } from "@/lib/site";
 
 export function SiteFooter() {
   return (
@@ -17,7 +17,7 @@ export function SiteFooter() {
           <Mizo className="mt-[6px] block">{mizo.footerAddress}</Mizo>
         </p>
 
-        <SocialButtons className="mt-[26px] justify-center" />
+        <SocialButtons links={SOCIAL.studio} className="mt-[26px] justify-center" />
 
         <nav
           aria-label="Footer"

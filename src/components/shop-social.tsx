@@ -16,8 +16,8 @@ export function ShopSocial() {
           Follow the shop
         </h2>
         <p className="max-w-[560px] text-[length:var(--text-body)] leading-[1.82] text-soft">
-          New stock, arrivals and finished installations — posted on the White
-          Walls Products pages.
+          New arrivals, orders in and finished installations — posted on the
+          White Walls Products pages.
         </p>
         <SocialButtons links={SOCIAL.products} className="mt-[6px] justify-center" />
       </div>

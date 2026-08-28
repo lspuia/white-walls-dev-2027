@@ -110,6 +110,8 @@ Wrap every Mizo span in `lang="lus"` (Mizo has no two-letter ISO code). Copy is 
 
 White Walls **retails** the brands it carries. Products are sold direct — to builders, carpenters and homeowners — not only specified into the studio's own interior projects, and retail is intended to become the larger share of income. Product copy anywhere on the site must read as retail; never frame the range as inputs to the studio's own work.
 
+**Most brands are not held in stock — they are supplied to order.** Say "supply" and "to order", not "stock" or "in stock", unless the owners confirm a line is actually held.
+
 Authorised dealerships are held for Hettich and Brassage. Do not assert a dealership, certification or retail term for any other brand without the owners confirming it.
 
 ## Lead generation

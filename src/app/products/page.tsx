@@ -117,10 +117,11 @@ export default function ProductsPage() {
       <section className="bg-bone pb-[64px] tab:pb-[72px]">
         <div className="shell flex justify-center">
           <p className="max-w-[820px] text-center text-[length:var(--text-lead)] leading-[1.8] text-soft">
-            White Walls is a retailer as well as a design studio. We stock and
-            sell the brands below direct — to builders, carpenters and anyone
-            building or renovating, as well as into our own projects. You do
-            not need to be a design client to buy from us.
+            White Walls is a retailer as well as a design studio. We supply
+            the brands below direct — to builders, carpenters and anyone
+            building or renovating, as well as into our own projects. Most
+            items are brought in to order. You do not need to be a design
+            client to buy from us.
           </p>
         </div>
       </section>
@@ -130,7 +131,7 @@ export default function ProductsPage() {
       <ProductGroup
         id="brands"
         heading="Brands"
-        blurb="Manufacturers we stock and supply."
+        blurb="Manufacturers we supply, mostly to order."
         items={PRODUCTS.filter((product) => product.kind === "brand")}
       />
 

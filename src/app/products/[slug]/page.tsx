@@ -68,7 +68,7 @@ export default async function ProductPage(
             id="range-heading"
             className="font-display text-[length:var(--text-service)] font-light leading-[1.18] text-ink"
           >
-            What we stock from {product.name}
+            What we supply from {product.name}
           </h2>
           <p className="max-w-[620px] text-[length:var(--text-caption)] leading-[1.68] text-mute">
             Product listing to come. Ask us for what you need in the meantime —

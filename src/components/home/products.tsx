@@ -25,7 +25,7 @@ export function Products() {
             id="products-heading"
             className="font-display text-[length:var(--text-heading)] font-light leading-[1.16] tracking-[-0.006em] text-ink"
           >
-            The brands we stock and sell
+            The brands we supply
           </h2>
           <p className="mt-[4px] max-w-[620px] text-[length:var(--text-body)] leading-[1.82] text-soft">
             Sold direct from the studio, not only into the rooms we design.

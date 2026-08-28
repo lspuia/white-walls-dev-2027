@@ -92,7 +92,7 @@ export const PRODUCTS: Product[] = [
     kind: "brand",
     tagline: "Surfaces and finishes",
     teaser:
-      "Surfaces and finishes, stocked and sold by the studio. Placeholder — copy for this brand is still to come.",
+      "Surfaces and finishes, supplied to order by the studio. Placeholder — copy for this brand is still to come.",
     body: [
       "Placeholder. This page is in place so the Veneto range has a home; the studio will supply the description, the product scope and the retail terms.",
     ],

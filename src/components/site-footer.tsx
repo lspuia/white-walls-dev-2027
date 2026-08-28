@@ -40,8 +40,17 @@ export function SiteFooter() {
           <p>
             © {studio.name.toUpperCase()} {new Date().getFullYear()}
           </p>
-          {/* Not yet routed — set as text, as in the Figma frame. */}
-          <p>PRIVACY{"  ·  "}TERMS</p>
+          <p className="flex items-center gap-[10px]">
+            <Link
+              href="/privacy-policy"
+              className="transition-colors hover:text-bronze"
+            >
+              PRIVACY
+            </Link>
+            <span aria-hidden>·</span>
+            {/* TERMS has no page yet — text until it does. */}
+            <span>TERMS</span>
+          </p>
         </div>
       </div>
     </footer>

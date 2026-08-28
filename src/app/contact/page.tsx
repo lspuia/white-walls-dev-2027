@@ -36,8 +36,9 @@ export default function ContactPage() {
       <section className="bg-bone pb-[64px] tab:pb-[72px]">
         <div className="shell flex justify-center">
           <p className="max-w-[700px] text-center text-[length:var(--text-lead)] leading-[1.8] text-soft">
-            Send a plan, a photo, or just the room dimensions. We reply on
-            WhatsApp, usually the same day.
+            Whether you have measured drawings or just a room in mind, we are
+            glad to talk it through. Call the studio, message us on WhatsApp,
+            or send an email — we usually reply the same day.
           </p>
         </div>
       </section>

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { PageTitle } from "@/components/page-title";
-import { PlaceholderImage } from "@/components/placeholder-image";
+import Image from "next/image";
 import { WhatsAppBand } from "@/components/whatsapp-band";
 import { studio } from "@/lib/site";
 
@@ -44,13 +44,20 @@ export default function ProfilePage() {
         </div>
       </section>
 
-      {/* Portrait, centred under the intro. */}
+      {/* Portrait, centred under the intro. The 2:3 slot is the designed
+          shape; the stand-in is a 16:9 photograph, centre-cropped into it.
+          TODO(assets): replace with the real portrait of Kim. */}
       <section className="shell pb-[72px] tab:pb-[88px]">
-        <PlaceholderImage
-          ratio="2/3"
-          label="Kim at the studio"
-          className="mx-auto w-full max-w-[460px]"
-        />
+        <div className="relative mx-auto aspect-[2/3] w-full max-w-[460px] overflow-hidden bg-sand">
+          <Image
+            src="/img/profile-placeholder.jpg"
+            alt=""
+            fill
+            priority
+            sizes="(min-width: 834px) 460px, calc(100vw - 48px)"
+            className="object-cover object-center"
+          />
+        </div>
       </section>
 
       {/* Philosophy — centred, matching the Our story block. */}

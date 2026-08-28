@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { PageTitle } from "@/components/page-title";
 import { PlaceholderImage } from "@/components/placeholder-image";
@@ -47,7 +48,21 @@ function ProductGroup({
                 href={`/products/${product.slug}`}
                 className="group flex h-full flex-col gap-[18px]"
               >
-                <PlaceholderImage ratio="3/4" label={product.name} />
+                {product.logo ? (
+                  /* Brand tiles open with a white logo card — pure white is
+                     used only here, to sit distinct from the bone ground. */
+                  <div className="flex aspect-[3/2] w-full items-center justify-center border border-rule bg-white p-[32px]">
+                    <Image
+                      src={product.logo.src}
+                      alt={`${product.name} logo`}
+                      width={product.logo.width}
+                      height={product.logo.height}
+                      className="max-h-[72px] w-auto max-w-full object-contain"
+                    />
+                  </div>
+                ) : (
+                  <PlaceholderImage ratio="3/4" label={product.name} />
+                )}
                 <div className="flex flex-col gap-[10px]">
                   <h3 className="font-display text-[length:var(--text-service)] font-light leading-[1.18] text-ink transition-colors group-hover:text-bronze">
                     {product.name}

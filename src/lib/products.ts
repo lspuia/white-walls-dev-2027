@@ -23,11 +23,18 @@ export type Product = {
   teaser: string;
   /** Body paragraphs on the inner page. */
   body: string[];
+  /** Brand lockup for the Products index. Brands only; categories have none. */
+  logo?: { src: string; width: number; height: number };
 };
 
 export const PRODUCTS: Product[] = [
   {
     slug: "hettich",
+    logo: {
+      src: "/brand/products/hettich.webp",
+      width: 400,
+      height: 250,
+    },
     name: "Hettich",
     kind: "brand",
     tagline: "Kitchen & furniture hardware",
@@ -40,6 +47,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "brassage",
+    logo: {
+      src: "/brand/products/brassage.webp",
+      width: 400,
+      height: 109,
+    },
     name: "Brassage",
     kind: "brand",
     tagline: "Custom brass ironmongery",
@@ -52,6 +64,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "hafele",
+    logo: {
+      src: "/brand/products/hafele.webp",
+      width: 400,
+      height: 154,
+    },
     name: "Häfele",
     kind: "brand",
     tagline: "Fittings and appliances, supplied to order",
@@ -64,6 +81,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "veneto",
+    logo: {
+      src: "/brand/products/veneto.webp",
+      width: 400,
+      height: 348,
+    },
     name: "Veneto",
     kind: "brand",
     tagline: "Surfaces and finishes",
@@ -75,6 +97,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "vmzinc",
+    logo: {
+      src: "/brand/products/vmzinc.webp",
+      width: 400,
+      height: 128,
+    },
     name: "VMZINC",
     kind: "brand",
     tagline: "Zinc cladding and roofing",

@@ -23,10 +23,10 @@ export const studio = {
   city: "Aizawl, Mizoram",
   hours: "Monday–Saturday, 9:30–18:00",
   since: 2017,
-  // TODO(owners): replace with the studio's live WhatsApp number (E.164, no +).
-  whatsapp: "919000000000",
-  // TODO(owners): replace with the studio's live address.
-  email: "hello@whitewalls.in",
+  // WhatsApp number in E.164 without the +, as wa.me requires.
+  whatsapp: "919362663457",
+  // Primary address for mailto links; the Contact page lists both.
+  email: "kimi@whitewalls.in",
 } as const;
 
 /**
@@ -40,20 +40,24 @@ export const studio = {
  * `link` is the owners' own share link for the White Walls listing
  * (Knowledge Graph id /g/11f5w_vn06).
  */
-export const map = {
-  embedSrc:
-    "https://maps.google.com/maps?q=White+Walls+Aizawl+Mizoram&z=15&output=embed",
-  link: "https://share.google/XyhQDv5xxVqVoWJfQ",
+/** Contact details, supplied by the owners. */
+export const contact = {
+  address: {
+    line1: "H.No. 141/3, Tuikual South",
+    line2: "Aizawl, Mizoram, 796001",
+  },
+  /** `dial` is E.164 for tel:/wa.me; `display` is how it reads on the page.
+   *  `whatsapp` marks which number backs studio.whatsapp — not shown on the page. */
+  phones: [
+    { dial: "+919362663457", display: "+91 93626 63457", whatsapp: true },
+    { dial: "+919654956742", display: "+91 96549 56742", whatsapp: false },
+    { dial: "+916909364955", display: "+91 69093 64955", whatsapp: false },
+  ],
+  emails: ["kimi@whitewalls.in", "puia@whitewalls.in"],
 } as const;
 
-/**
- * Contact details. `address` and `phone` stay null until the owners supply
- * them — nothing invented for a real business. Each renders only once set.
- */
-export const contact = {
-  address: null as string | null,
-  phone: null as string | null,
-} satisfies { address: string | null; phone: string | null };
+/** One-line address, for map queries and structured data. */
+export const addressLine = `${contact.address.line1}, ${contact.address.line2}`;
 
 export const WHATSAPP_PREFILL =
   "Hello White Walls — I'd like to talk about a space. ";
@@ -74,3 +78,13 @@ export const mizo = {
     "Whatsapp ah kan biak theih reng e, kan hman veleh kan rawn chhang ang che",
   footerAddress: null,
 } satisfies Record<string, string | null>;
+
+export const map = {
+  /** Built from the real street address, so the pin is exact. To use the
+   *  listing's own embed instead: Google Maps -> Share -> Embed a map ->
+   *  paste the iframe `src` here. */
+  embedSrc: `https://maps.google.com/maps?q=${encodeURIComponent(
+    `White Walls Interior Design Studio, ${contact.address.line1}, ${contact.address.line2}`
+  )}&z=16&output=embed`,
+  link: "https://share.google/XyhQDv5xxVqVoWJfQ",
+} as const;

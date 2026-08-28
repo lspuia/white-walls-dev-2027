@@ -46,38 +46,43 @@ export default function ContactPage() {
         <div className="grid gap-[48px] desk:grid-cols-12 desk:gap-x-[40px]">
           {/* Details */}
           <div className="flex flex-col gap-[32px] desk:col-span-5">
-            {contact.address && (
-              <Detail label="Studio">
-                <p className="whitespace-pre-line">{contact.address}</p>
-              </Detail>
-            )}
-
-            <Detail label="Where">
-              <p>{studio.city}</p>
+            <Detail label="Studio">
+              <p>{contact.address.line1}</p>
+              <p>{contact.address.line2}</p>
             </Detail>
 
             <Detail label="Hours">
               <p>{studio.hours}</p>
             </Detail>
 
-            {contact.phone && (
-              <Detail label="Phone">
-                <a
-                  href={`tel:${contact.phone.replace(/[^\d+]/g, "")}`}
-                  className="transition-colors hover:text-bronze"
-                >
-                  {contact.phone}
-                </a>
-              </Detail>
-            )}
+            <Detail label="Phone">
+              <ul className="flex flex-col gap-[4px]">
+                {contact.phones.map((phone) => (
+                  <li key={phone.dial}>
+                    <a
+                      href={`tel:${phone.dial}`}
+                      className="transition-colors hover:text-bronze"
+                    >
+                      {phone.display}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </Detail>
 
             <Detail label="Email">
-              <a
-                href={`mailto:${studio.email}`}
-                className="transition-colors hover:text-bronze"
-              >
-                {studio.email}
-              </a>
+              <ul className="flex flex-col gap-[4px]">
+                {contact.emails.map((email) => (
+                  <li key={email}>
+                    <a
+                      href={`mailto:${email}`}
+                      className="transition-colors hover:text-bronze"
+                    >
+                      {email}
+                    </a>
+                  </li>
+                ))}
+              </ul>
             </Detail>
 
             <div className="flex flex-col items-start gap-[16px]">

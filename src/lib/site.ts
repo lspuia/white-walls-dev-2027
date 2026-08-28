@@ -29,6 +29,32 @@ export const studio = {
   email: "hello@whitewalls.in",
 } as const;
 
+/**
+ * Google Maps listing.
+ *
+ * `embedSrc` currently queries the listing by name and city. To pin it
+ * exactly, open the listing in Google Maps → Share → Embed a map → copy the
+ * iframe `src` and paste it here. Set it to `null` to fall back to the link
+ * card alone.
+ *
+ * `link` is the owners' own share link for the White Walls listing
+ * (Knowledge Graph id /g/11f5w_vn06).
+ */
+export const map = {
+  embedSrc:
+    "https://maps.google.com/maps?q=White+Walls+Aizawl+Mizoram&z=15&output=embed",
+  link: "https://share.google/XyhQDv5xxVqVoWJfQ",
+} as const;
+
+/**
+ * Contact details. `address` and `phone` stay null until the owners supply
+ * them — nothing invented for a real business. Each renders only once set.
+ */
+export const contact = {
+  address: null as string | null,
+  phone: null as string | null,
+} satisfies { address: string | null; phone: string | null };
+
 export const WHATSAPP_PREFILL =
   "Hello White Walls — I'd like to talk about a space. ";
 

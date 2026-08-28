@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageTitle } from "@/components/page-title";
 import { PlaceholderImage } from "@/components/placeholder-image";
@@ -98,14 +97,6 @@ export default async function ProductPage(
           ))}
         </ul>
 
-        <div className="mt-[44px] flex justify-center">
-          <Link
-            href="/products"
-            className="eyebrow tracking-[0.176em] text-bronze transition-colors hover:text-ink"
-          >
-            All products
-          </Link>
-        </div>
       </section>
 
       <ShopSocial />

@@ -21,7 +21,7 @@ export default function ProfilePage() {
           <h2 id="story-heading" className="eyebrow tracking-[0.208em] text-bronze">
             Our story
           </h2>
-          <div className="flex max-w-[700px] flex-col gap-[20px]">
+          <div className="flex max-w-[820px] flex-col gap-[20px]">
             <p className="text-[length:var(--text-lead)] leading-[1.8] text-soft">
               White Walls is an interior design studio in Aizawl, working across
               residential and commercial interiors since {studio.since}. The
@@ -65,7 +65,7 @@ export default function ProfilePage() {
           >
             Philosophy
           </h2>
-          <div className="flex max-w-[700px] flex-col gap-[20px]">
+          <div className="flex max-w-[820px] flex-col gap-[20px]">
             <p className="text-[length:var(--text-lead)] leading-[1.8] text-soft">
               We plan a room around how it is actually used — where the light
               falls, where people stand, what has to be within reach. The

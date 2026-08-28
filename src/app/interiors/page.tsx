@@ -31,7 +31,7 @@ export default function InteriorsPage() {
       {/* Centred intro, narrow measure. */}
       <section className="bg-bone pb-[64px] tab:pb-[72px]">
         <div className="shell flex justify-center">
-          <p className="max-w-[700px] text-center text-[length:var(--text-lead)] leading-[1.8] text-soft">
+          <p className="max-w-[820px] text-center text-[length:var(--text-lead)] leading-[1.8] text-soft">
             Selected residential and commercial interiors across Aizawl and
             Mizoram. Each room is planned around how it is actually used, then
             drawn, built and fitted by the studio — the layout, the cabinetry,

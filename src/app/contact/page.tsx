@@ -36,7 +36,7 @@ export default function ContactPage() {
 
       <section className="bg-bone pb-[56px] tab:pb-[64px]">
         <div className="shell flex justify-center">
-          <p className="max-w-[700px] text-center text-[length:var(--text-lead)] leading-[1.8] text-soft">
+          <p className="max-w-[820px] text-center text-[length:var(--text-lead)] leading-[1.8] text-soft">
             We work best from the start — measuring the space ourselves and
             planning the layout from scratch. Call the studio, message us on
             WhatsApp, or send an email; we usually reply the same day.

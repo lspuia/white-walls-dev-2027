@@ -17,7 +17,7 @@ export default function ProductsPage() {
 
       <section className="bg-bone pb-[64px] tab:pb-[72px]">
         <div className="shell flex justify-center">
-          <p className="max-w-[700px] text-center text-[length:var(--text-lead)] leading-[1.8] text-soft">
+          <p className="max-w-[820px] text-center text-[length:var(--text-lead)] leading-[1.8] text-soft">
             The fittings behind the finish. We specify and supply the hardware,
             surfaces and fixtures that go into the rooms we design.
           </p>

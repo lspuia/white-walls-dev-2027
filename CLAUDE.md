@@ -54,7 +54,7 @@ Keep any new token above 4.5:1 on the ground it sits on.
 
 ## Type
 
-Cormorant Garamond (Light, Light Italic, Regular) for display. Jost (Light, Regular, Medium) for UI and body. Body copy and eyebrows are set Medium for legibility; display headings stay Light.
+Cormorant Garamond (Light, Light Italic, Regular) for display. Jost (Light, Regular, Medium) for UI and body. Body copy is set Regular; the eyebrow label tier stays Medium for legibility at 13.5px; display headings stay Light.
 
 Import both with the `latin-ext` subset — not the default `latin`. Mizo needs U+1E6D (ṭ) and U+1E6C (Ṭ), which live outside the default subset and will silently fall back mid-word.
 
@@ -67,8 +67,8 @@ Desktop scale after the type increase (the whole ramp was scaled a further 8%):
 | Section heading | 50 | Cormorant Light |
 | Statement | 36 | Cormorant Light |
 | Product / service name | 26.5–34 | Cormorant Light |
-| Lead paragraph | 19 | Jost Medium |
-| Body | 17.3 | Jost Medium |
+| Lead paragraph | 19 | Jost Regular |
+| Body | 17.3 | Jost Regular |
 | Nav | 13.5 | Jost Medium |
 | Eyebrow / small caps | 13.5, tracked 2.4 | Jost Medium |
 

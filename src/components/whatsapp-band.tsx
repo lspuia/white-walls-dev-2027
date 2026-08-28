@@ -1,4 +1,3 @@
-import { Logo } from "./logo";
 import { Mizo } from "./mizo";
 import { WhatsAppButton } from "./whatsapp-button";
 import { mizo } from "@/lib/site";
@@ -19,7 +18,6 @@ export function WhatsAppBand({
   return (
     <section className="bg-near">
       <div className="shell flex flex-col items-center gap-[30px] py-[100px] text-center">
-        <Logo reversed className="w-[176px]" />
         <p className="max-w-[620px] font-display text-[length:var(--text-statement)] font-light italic leading-[1.5] text-cream">
           {line}
         </p>

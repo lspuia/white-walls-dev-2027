@@ -30,19 +30,31 @@ Only Home is designed. Profile, Interiors, Products and Contact are stubs — he
 | `sand` | `#F4F0E8` | services band |
 | `wash` | `#E8E2D6` | footer |
 | `ink` | `#4A443E` | body text |
-| `soft` | `#6E6860` | secondary text |
-| `mute` | `#969188` | captions, legal |
+| `soft` | `#5C5751` | secondary text |
+| `mute` | `#605D57` | captions, legal |
 | `rule` | `#E2DCD1` | hairlines |
 | `near` | `#1A1714` | inverted band, logo |
 | `cream` | `#F5F2ED` | text on dark |
-| `brass` | `#C8B89A` | eyebrow labels, primary button |
-| `bronze` | `#8A6E45` | active nav, Mizo lines |
+| `brass` | `#C8B89A` | rules, primary button fill, text on dark |
+| `bronze` | `#715A39` | eyebrow labels, links, active nav, Mizo lines |
 
-Brass on bone is low contrast. It is the house style for decorative eyebrow labels only. Anything a user must read or click uses `bronze` or darker.
+**Brass never carries text on a light ground.** It measures 1.85:1 on `bone` — effectively invisible. Brass is for rules, the primary button fill, and text on the `near` ground (9.16:1). Every label on a light ground uses `bronze` or darker.
+
+The audience is 25–65 and includes rural users, so readability outranks the house style. `soft`, `mute` and `bronze` were darkened to clear 4.5:1 on the *darkest* ground each sits on (`wash`), not just on `bone`. Current worst-case ratios — bone / sand / wash:
+
+| Token | bone | sand | wash |
+| --- | --- | --- | --- |
+| `bronze` | 6.20 | 5.73 | 5.05 |
+| `mute` | 6.24 | 5.77 | 5.09 |
+| `soft` | 6.80 | 6.29 | 5.54 |
+| `nav` | 7.11 | 6.57 | 5.79 |
+| `ink` | 9.13 | 8.45 | 7.44 |
+
+Keep any new token above 4.5:1 on the ground it sits on.
 
 ## Type
 
-Cormorant Garamond (Light, Light Italic, Regular) for display. Jost (Light, Regular, Medium) for UI and body. Body copy and eyebrows are set Regular; display headings stay Light.
+Cormorant Garamond (Light, Light Italic, Regular) for display. Jost (Light, Regular, Medium) for UI and body. Body copy and eyebrows are set Medium for legibility; display headings stay Light.
 
 Import both with the `latin-ext` subset — not the default `latin`. Mizo needs U+1E6D (ṭ) and U+1E6C (Ṭ), which live outside the default subset and will silently fall back mid-word.
 
@@ -55,10 +67,10 @@ Desktop scale after the type increase (the whole ramp was scaled a further 8%):
 | Section heading | 50 | Cormorant Light |
 | Statement | 36 | Cormorant Light |
 | Product / service name | 26.5–34 | Cormorant Light |
-| Lead paragraph | 19 | Jost Regular |
-| Body | 17.3 | Jost Regular |
+| Lead paragraph | 19 | Jost Medium |
+| Body | 17.3 | Jost Medium |
 | Nav | 13.5 | Jost Medium |
-| Eyebrow / small caps | 13.5, tracked 2.4 | Jost Regular |
+| Eyebrow / small caps | 13.5, tracked 2.4 | Jost Medium |
 
 The scale is ad-hoc, not a ramp. Consolidate into tokens during the build rather than porting the exact numbers.
 

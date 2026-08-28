@@ -21,7 +21,7 @@ export function Services() {
     <section aria-labelledby="services-heading" className="band bg-sand">
       <div className="shell flex flex-col gap-[52px] tab:gap-[76px]">
         <div className="flex flex-col items-center gap-[20px] text-center">
-          <p className="eyebrow tracking-[0.208em] text-brass">What we do</p>
+          <p className="eyebrow tracking-[0.208em] text-bronze">What we do</p>
           <h2
             id="services-heading"
             className="font-display text-[length:var(--text-heading)] font-light leading-[1.16] tracking-[-0.006em] text-ink"
@@ -35,7 +35,7 @@ export function Services() {
           {SERVICES.map((service) => (
             <li key={service.n} className="flex flex-col gap-[18px] pt-[30px]">
               <div aria-hidden className="h-px w-full bg-rule" />
-              <p className="mt-[14px] text-[0.813rem] tracking-[0.154em] text-brass">
+              <p className="mt-[14px] text-[0.813rem] tracking-[0.154em] text-bronze">
                 {service.n}
               </p>
               <h3 className="font-display text-[length:var(--text-service)] font-light leading-[1.18] text-ink">

@@ -36,7 +36,7 @@ export function Hero() {
           aria-hidden
           className="pointer-events-none absolute -inset-x-[38%] -inset-y-[22%] tab:-inset-x-[10%] tab:-inset-y-[16%] bg-[radial-gradient(ellipse_at_center,rgba(20,18,15,0.74)_0%,rgba(20,18,15,0.66)_46%,rgba(20,18,15,0.34)_70%,rgba(20,18,15,0)_86%)] blur-[28px]"
         />
-        <p className="relative eyebrow tracking-[0.272em] text-brass">
+        <p className="relative eyebrow tracking-[0.272em] text-cream">
           {studio.city.toUpperCase()}
           {"  ·  "}SINCE {studio.since}
         </p>
@@ -49,7 +49,7 @@ export function Hero() {
           <br />
           their quiet.
         </h1>
-        <p className="relative max-w-[640px] text-[length:var(--text-lead)] leading-[1.8] tracking-[0.011em] text-haze">
+        <p className="relative max-w-[640px] text-[length:var(--text-lead)] leading-[1.8] tracking-[0.011em] text-cream">
           Interior design, cabinetry and hardware — one studio, whole rooms, since{" "}
           {studio.since}.
         </p>
@@ -59,7 +59,7 @@ export function Hero() {
         href="#statement"
         className="group absolute bottom-[48px] left-1/2 hidden -translate-x-1/2 flex-col items-center gap-[14px] tab:flex"
       >
-        <span className="text-[length:var(--text-cue)] tracking-[0.218em] text-cue transition-colors group-hover:text-brass">
+        <span className="text-[length:var(--text-cue)] tracking-[0.218em] text-haze transition-colors group-hover:text-cream">
           SCROLL
         </span>
         <span

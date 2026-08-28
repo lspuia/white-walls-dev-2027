@@ -6,7 +6,7 @@ export function Contact() {
   return (
     <section aria-labelledby="contact-heading" className="band bg-bone">
       <div className="shell flex flex-col items-center gap-[30px] text-center">
-        <p className="eyebrow tracking-[0.208em] text-brass">Start a project</p>
+        <p className="eyebrow tracking-[0.208em] text-bronze">Start a project</p>
         <h2
           id="contact-heading"
           className="font-display text-[length:var(--text-contact)] font-light leading-[1.18] tracking-[-0.01em] text-ink"

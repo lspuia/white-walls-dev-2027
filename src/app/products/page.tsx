@@ -52,7 +52,7 @@ export default function ProductsPage() {
                       : "desk:col-span-5 desk:col-start-8"
                   }`}
                 >
-                  <p className="eyebrow tracking-[0.208em] text-brass">
+                  <p className="eyebrow tracking-[0.208em] text-bronze">
                     {product.kind === "brand" ? "Brand" : "Category"}
                   </p>
                   <h2

@@ -31,7 +31,7 @@ export default function ProfilePage() {
           <div className="order-2 flex flex-col gap-[26px] desk:order-1 desk:col-span-5 desk:pt-[110px]">
             <h2
               id="story-heading"
-              className="eyebrow tracking-[0.208em] text-brass"
+              className="eyebrow tracking-[0.208em] text-bronze"
             >
               Our story
             </h2>
@@ -81,7 +81,7 @@ export default function ProfilePage() {
           <div className="flex flex-col gap-[26px] desk:col-span-5 desk:col-start-8 desk:pt-[150px]">
             <h2
               id="philosophy-heading"
-              className="eyebrow tracking-[0.208em] text-brass"
+              className="eyebrow tracking-[0.208em] text-bronze"
             >
               Philosophy
             </h2>

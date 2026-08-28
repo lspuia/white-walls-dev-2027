@@ -6,13 +6,16 @@
   --color-sand: #f4f0e8;
   --color-wash: #e8e2d6;
   --color-ink: #4a443e;
-  --color-soft: #6e6860;
-  --color-mute: #969188;
+  --color-soft: #5c5751;
+  --color-mute: #605d57;
   --color-rule: #e2dcd1;
   --color-near: #1a1714;
   --color-cream: #f5f2ed;
+  /* brass is decorative only: rules, the button fill, and text on the
+     near ground. It measures 1.85:1 on bone, so it never carries text on
+     a light ground — bronze does. */
   --color-brass: #c8b89a;
-  --color-bronze: #8a6e45;
+  --color-bronze: #715a39;
 
   /* Extensions the Figma frame uses that the palette table does not name */
   --color-nav: #5a544d;   /* inactive nav on bone */
@@ -69,8 +72,9 @@ body {
   background: var(--color-bone);
   color: var(--color-ink);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-  /* Regular, not Light. Display headings opt back down via `font-light`. */
-  font-weight: 400;
+  /* Medium, for legibility at distance and for older eyes.
+     Display headings opt back down via `font-light`. */
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
@@ -86,10 +90,10 @@ body {
   padding-block: var(--pad-y);
 }
 
-/* Eyebrow / small-caps label tier — Jost Regular, tracked 2.4 */
+/* Eyebrow / small-caps label tier — Jost Medium, tracked 2.4 */
 @utility eyebrow {
   font-size: var(--text-eyebrow);
-  font-weight: 400;
+  font-weight: 500;
   letter-spacing: 0.192em;
   text-transform: uppercase;
   line-height: 1;

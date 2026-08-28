@@ -18,7 +18,7 @@ export function Products() {
     <section aria-labelledby="products-heading" className="band bg-bone">
       <div className="shell flex flex-col gap-[52px] tab:gap-[76px]">
         <div className="flex flex-col items-center gap-[20px] text-center">
-          <p className="eyebrow tracking-[0.208em] text-brass">
+          <p className="eyebrow tracking-[0.208em] text-bronze">
             Products &amp; Dealerships
           </p>
           <h2

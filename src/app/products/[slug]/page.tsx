@@ -12,7 +12,7 @@ const LISTING_SLOTS = ["01", "02", "03", "04", "05", "06"] as const;
 /** Every product page is known at build time, so all render static. */
 /** Slugs with their own bespoke route, which takes precedence over this one.
     They must be excluded here or the two collide at build. */
-const BESPOKE = ["hettich", "brassage", "hafele", "veneto"];
+const BESPOKE = ["hettich", "brassage", "hafele", "veneto", "vmzinc"];
 
 export function generateStaticParams() {
   return PRODUCTS.filter((product) => !BESPOKE.includes(product.slug)).map(

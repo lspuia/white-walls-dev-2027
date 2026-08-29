@@ -106,12 +106,12 @@ export const PRODUCTS: Product[] = [
     },
     name: "VMZINC",
     kind: "brand",
-    tagline: "Zinc cladding and roofing",
+    tagline: "Rolled zinc for roofs and facades",
     teaser:
-      "Zinc cladding and roofing systems, sold to order. Placeholder — the studio will confirm the range and retail terms.",
+      "Rolled zinc for roofs, facades and rainwater — standing seam, flat-lock and interlocking panels, in the weathered surface aspects zinc is known for. Supplied to order.",
     body: [
       "VMZINC produces rolled zinc for cladding and roofing, in a range of surface finishes that weather over time.",
-      "Placeholder. The studio will confirm which systems it retails and how they are supplied.",
+      "VMZINC has rolled zinc since 1837. It is a building-envelope material rather than an interior one: a roof or a facade skin that weathers to a matte grey and lasts for decades.",
     ],
   },
   {

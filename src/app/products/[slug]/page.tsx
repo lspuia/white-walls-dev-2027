@@ -59,8 +59,9 @@ export default async function ProductPage(
         </div>
       </section>
 
-      {/* Listing — a shared placeholder template. Each brand and category will
-          get its own layout once the ranges are supplied. */}
+      {/* Placeholder only. Each brand and category becomes its own small
+          brochure page with its own design — this shared template is a
+          holding pattern until those are built, not the intended shape. */}
       <section aria-labelledby="range-heading" className="shell pb-[var(--pad-y)]">
         <div className="flex flex-col items-center gap-[12px] text-center">
           <p className="eyebrow tracking-[0.208em] text-bronze">The range</p>
@@ -71,8 +72,8 @@ export default async function ProductPage(
             What we supply from {product.name}
           </h2>
           <p className="max-w-[620px] text-[length:var(--text-caption)] leading-[1.68] text-mute">
-            Product listing to come. Ask us for what you need in the meantime —
-            we will quote from the current range.
+            This page is still being built. Ask us for what you need in the
+            meantime — we will quote, and we ship across Mizoram.
           </p>
         </div>
 

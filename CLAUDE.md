@@ -116,6 +116,12 @@ The **primary retail audience is homeowners across Mizoram**, reached through on
 
 Authorised dealerships are held for Hettich and Brassage. Do not assert a dealership, certification or retail term for any other brand without the owners confirming it.
 
+## Product pages
+
+Each brand and category page at `/products/<slug>` is **its own small brochure site** — bespoke design per brand, not a shared listing template. They will differ from one another by intent.
+
+What ships today is a placeholder template covering all eight. As each real design arrives, give that slug its own route so it overrides the shared one; keep the dynamic route for the ones still pending, and drop its slug from `generateStaticParams` so the two do not collide.
+
 ## Lead generation
 
 WhatsApp, not email forms. Results-first, then a click-to-WhatsApp CTA with a pre-filled message. Track WhatsApp clicks as the primary conversion.

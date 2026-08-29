@@ -9,7 +9,7 @@ const vmzinc = productBySlug("vmzinc")!;
 export const metadata: Metadata = {
   title: "VMZINC",
   description:
-    "VMZINC rolled zinc supplied by White Walls, Aizawl — standing seam and flat-lock roofing, rainscreen facades and rainwater systems, in Quartz-Zinc, Anthra-Zinc, Pigmento and Azengar. Supplied to order across Mizoram.",
+    "VMZINC rolled zinc supplied by White Walls, Aizawl — standing seam and flat-lock roofing, rainscreen facades and rainwater systems, in Quartz-Zinc, Anthra-Zinc, Pigmento and Azengar. Supplied to order.",
 };
 
 /** VMZINC's surface aspects — the material's own vocabulary. */
@@ -204,7 +204,7 @@ export default function VmzincPage() {
             Send the drawings, the areas and the system you have in mind — or
             just describe the building and we will work it through with you. We
             will come back with quantities, the surface aspect, a lead time and
-            a price. Delivery anywhere in Mizoram.
+            a price.
           </p>
         </div>
       </section>

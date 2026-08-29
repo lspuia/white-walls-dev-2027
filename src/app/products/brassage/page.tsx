@@ -9,7 +9,7 @@ const brassage = productBySlug("brassage")!;
 export const metadata: Metadata = {
   title: "Brassage",
   description:
-    "White Walls is an authorised Brassage dealer in Aizawl. Solid brass door and cabinet hardware, made to order in over thirty finishes — supplied direct to homeowners across Mizoram.",
+    "White Walls is an authorised Brassage dealer in Aizawl. Solid brass door and cabinet hardware, made to order in over thirty finishes.",
 };
 
 /** Their collections, grouped as their own site groups them. */
@@ -272,7 +272,6 @@ export default function BrassagePage() {
               We hold an authorised Brassage dealership. Because every piece is
               made to order, tell us the collection, the finish and the
               quantities, and we will confirm the lead time with the quote.
-              Orders ship anywhere in Mizoram.
             </p>
           </div>
         </div>

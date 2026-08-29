@@ -12,7 +12,7 @@ const SERVICES = [
   {
     n: "03",
     name: "Hardware & Supply",
-    body: "Authorised dealership for Hettich, Crompton and Brassage — specified and supplied to the project.",
+    body: "Authorised dealership for Hettich and Brassage — specified and supplied to the project.",
   },
 ] as const;
 

@@ -79,7 +79,7 @@ export default async function ProductPage(
           </h2>
           <p className="max-w-[620px] text-[length:var(--text-caption)] leading-[1.68] text-mute">
             This page is still being built. Ask us for what you need in the
-            meantime — we will quote, and we ship across Mizoram.
+            meantime and we will quote.
           </p>
         </div>
 

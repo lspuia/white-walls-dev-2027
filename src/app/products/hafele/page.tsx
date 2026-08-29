@@ -9,7 +9,7 @@ const hafele = productBySlug("hafele")!;
 export const metadata: Metadata = {
   title: "Häfele Appliances",
   description:
-    "Häfele kitchen appliances supplied by White Walls, Aizawl — hobs, hoods, ovens, dishwashers and built-in coffee machines, delivered across Mizoram. Appliances only.",
+    "Häfele kitchen appliances supplied by White Walls, Aizawl — hobs, hoods, ovens, dishwashers and built-in coffee machines. Appliances only.",
 };
 
 const LARGE = [
@@ -194,9 +194,8 @@ export default function HafelePage() {
           </h2>
           <p className="text-[length:var(--text-body)] leading-[1.82] text-soft">
             Tell us the model, or tell us the kitchen and we will suggest one.
-            You do not need to be a design client. Orders ship anywhere in
-            Mizoram, and where the appliance is built in we can fit it as part
-            of the work.
+            You do not need to be a design client, and where the appliance is
+            built in we can fit it as part of the work.
           </p>
         </div>
       </section>

@@ -86,8 +86,7 @@ export default function VenetoPage() {
 
           <p className="max-w-[680px] text-[length:var(--text-lead)] leading-[1.8] text-cream">
             Custom modular wardrobes and storage, made to the measured opening
-            rather than to a standard carcass. We supply the range across
-            Mizoram.
+            rather than to a standard carcass.
           </p>
         </div>
       </section>
@@ -159,7 +158,7 @@ export default function VenetoPage() {
             </p>
             <p className="text-[length:var(--text-body)] leading-[1.82] text-soft">
               Veneto builds under an ISO 9001:2015 certified process, out of
-              Maharashtra, and delivers across India.
+              Maharashtra.
             </p>
           </div>
         </div>

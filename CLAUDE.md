@@ -114,6 +114,8 @@ The **primary retail audience is homeowners across Mizoram**, reached through on
 
 **Most brands are not held in stock — they are supplied to order.** Say "supply" and "to order", not "stock" or "in stock", unless the owners confirm a line is actually held.
 
+**Häfele is appliances only** — the studio does not deal in the wider Häfele fittings catalogue. Never widen it in copy.
+
 Authorised dealerships are held for Hettich and Brassage. Do not assert a dealership, certification or retail term for any other brand without the owners confirming it.
 
 ## Product pages

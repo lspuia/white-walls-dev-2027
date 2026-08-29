@@ -73,12 +73,12 @@ export const PRODUCTS: Product[] = [
     },
     name: "Häfele",
     kind: "brand",
-    tagline: "Fittings and appliances, supplied to order",
+    tagline: "Built-in kitchen appliances",
     teaser:
-      "Fittings and appliances sold to order. Placeholder — the studio will confirm the range and retail terms.",
+      "Built-in kitchen appliances, sold to order. Appliances are the part of the Häfele catalogue we deal in.",
     body: [
-      "Häfele supplies furniture fittings, storage systems and appliances across a very wide catalogue.",
-      "Placeholder. The studio will confirm which parts of the range it retails and on what terms.",
+      "Häfele's appliance range covers the built-in equipment of a kitchen — the machines that sit behind and under the cabinetry rather than beside it.",
+      "We deal in Häfele appliances only, not the wider fittings catalogue. Placeholder: the studio will confirm the models offered and the retail terms.",
     ],
   },
   {

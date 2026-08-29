@@ -181,8 +181,8 @@ export default function VenetoPage() {
               lead time — every piece is made to order.
             </p>
             <p className="text-[length:var(--text-body)] leading-[1.82] text-soft">
-              You do not need to be a design client. Orders ship anywhere in
-              Mizoram, and we can fit as part of the work.
+              You do not need to be a design client, and we can fit as part of
+              the work.
             </p>
           </div>
         </div>

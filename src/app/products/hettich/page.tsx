@@ -154,25 +154,17 @@ export default function HettichPage() {
           </p>
         </div>
 
-        <PlaceholderImage
-          ratio="16/9"
-          label="Hettich fittings in a finished kitchen"
-          className="mb-[56px] w-full"
-        />
-
         <ul className="grid gap-x-[40px] gap-y-[48px] tab:grid-cols-2 desk:grid-cols-3">
           {FAMILIES.map((family) => (
-            <li
-              key={family.name}
-              className="flex flex-col gap-[12px] border-t border-rule pt-[22px]"
-            >
-              <h3 className="font-display text-[length:var(--text-service)] font-light leading-[1.18] text-ink">
+            <li key={family.name} className="flex flex-col gap-[16px]">
+              <PlaceholderImage ratio="4/3" label={family.name} />
+              <h3 className="mt-[2px] font-display text-[length:var(--text-service)] font-light leading-[1.18] text-ink">
                 {family.name}
               </h3>
               <p className="text-[length:var(--text-caption)] leading-[1.68] text-mute">
                 {family.line}
               </p>
-              <ul className="mt-[6px] flex flex-col gap-[6px]">
+              <ul className="mt-[4px] flex flex-col gap-[6px]">
                 {family.items.map((item) => (
                   <li
                     key={item}

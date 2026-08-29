@@ -29,7 +29,11 @@ export function PlaceholderImage({
       }}
     >
       {showLabel && (
-        <span className="eyebrow m-[20px] text-cream/80">{label}</span>
+        /* On a chip: the gradient runs light at one end, where a plain cream
+           caption sits at roughly 1.2:1. */
+        <span className="eyebrow m-[16px] bg-near/80 px-[10px] py-[7px] text-cream">
+          {label}
+        </span>
       )}
     </div>
   );

@@ -92,9 +92,12 @@ const SYSTEMS = [
 export default function HettichPage() {
   return (
     <>
-      {/* Masthead */}
-      <section className="bg-bone pt-[40px] pb-[56px] tab:pt-[52px] tab:pb-[72px]">
-        <div className="shell flex flex-col items-center gap-[28px] text-center">
+      {/* Masthead and range, as one section */}
+      <section
+        aria-labelledby="families-heading"
+        className="shell bg-bone pt-[40px] pb-[var(--pad-y)] tab:pt-[52px]"
+      >
+        <div className="flex flex-col items-center gap-[28px] text-center">
           <p className="eyebrow tracking-[0.208em] text-bronze">
             Authorised dealer
           </p>
@@ -122,47 +125,23 @@ export default function HettichPage() {
             in. We supply the range direct to homeowners across Mizoram, and we
             ship.
           </p>
-        </div>
-      </section>
 
-      {/* Why it matters */}
-      <section className="relative bg-near">
-        <div aria-hidden className="absolute inset-0 overflow-hidden">
-          <PlaceholderImage
-            label="Hettich hinge detail"
-            showLabel={false}
-            className="h-full w-full"
-          />
-          {/* Heavy scrim: the quote has to clear contrast over whatever
-              photograph eventually sits here. Re-measure when it lands. */}
-          <div className="absolute inset-0 bg-[rgba(20,18,15,0.82)]" />
-        </div>
-        <div className="shell relative flex justify-center py-[84px] tab:py-[110px]">
-          <blockquote className="max-w-[900px] text-center font-display text-[length:var(--text-quote)] font-light italic leading-[1.5] text-cream">
-            Nobody compliments a hinge. They notice the door that drops, the
-            drawer that sticks, the handle that works loose. Hardware is the
-            part of a room you only meet when it fails.
-          </blockquote>
-        </div>
-      </section>
-
-      {/* What we supply */}
-      <section aria-labelledby="families-heading" className="shell pt-[var(--pad-y)]">
-        <div className="flex flex-col items-center gap-[14px] pb-[52px] text-center">
-          <p className="eyebrow tracking-[0.208em] text-bronze">The range</p>
-          <h2
-            id="families-heading"
-            className="font-display text-[length:var(--text-heading)] font-light leading-[1.16] tracking-[-0.006em] text-ink"
-          >
-            What we supply from Hettich
-          </h2>
-          <p className="max-w-[620px] text-[length:var(--text-body)] leading-[1.82] text-soft">
+          <p className="max-w-[720px] text-[length:var(--text-body)] leading-[1.82] text-soft">
             Tell us the cabinet sizes, or send a drawing, and we will quote the
             fittings to suit.
           </p>
+
+          {/* The range continues the masthead rather than opening a second
+              titled section — the big heading only restated the h1. */}
+          <h2
+            id="families-heading"
+            className="eyebrow mt-[26px] tracking-[0.208em] text-bronze"
+          >
+            The range
+          </h2>
         </div>
 
-        <ul className="grid gap-x-[40px] gap-y-[48px] tab:grid-cols-2 desk:grid-cols-3">
+        <ul className="mt-[36px] grid gap-x-[40px] gap-y-[48px] tab:grid-cols-2 desk:grid-cols-3">
           {FAMILIES.map((family) => (
             <li key={family.name} className="flex flex-col gap-[16px]">
               <div className="relative aspect-[4/3] w-full overflow-hidden bg-sand">

@@ -119,8 +119,18 @@ export default function HettichPage() {
       </section>
 
       {/* Why it matters */}
-      <section className="bg-near">
-        <div className="shell flex justify-center py-[84px] tab:py-[110px]">
+      <section className="relative bg-near">
+        <div aria-hidden className="absolute inset-0 overflow-hidden">
+          <PlaceholderImage
+            label="Hettich hinge detail"
+            showLabel={false}
+            className="h-full w-full"
+          />
+          {/* Heavy scrim: the quote has to clear contrast over whatever
+              photograph eventually sits here. Re-measure when it lands. */}
+          <div className="absolute inset-0 bg-[rgba(20,18,15,0.82)]" />
+        </div>
+        <div className="shell relative flex justify-center py-[84px] tab:py-[110px]">
           <blockquote className="max-w-[900px] text-center font-display text-[length:var(--text-quote)] font-light italic leading-[1.5] text-cream">
             Nobody compliments a hinge. They notice the door that drops, the
             drawer that sticks, the handle that works loose. Hardware is the
@@ -144,6 +154,12 @@ export default function HettichPage() {
             fittings to suit.
           </p>
         </div>
+
+        <PlaceholderImage
+          ratio="16/9"
+          label="Hettich fittings in a finished kitchen"
+          className="mb-[56px] w-full"
+        />
 
         <ul className="grid gap-x-[40px] gap-y-[48px] tab:grid-cols-2 desk:grid-cols-3">
           {FAMILIES.map((family) => (
@@ -198,6 +214,11 @@ export default function HettichPage() {
             Ask for a system by name, or describe the room and we will specify
             it for you.
           </p>
+
+          <div className="mt-[44px] grid w-full gap-[24px] tab:grid-cols-2">
+            <PlaceholderImage ratio="4/3" label="AvanTech YOU drawer" />
+            <PlaceholderImage ratio="4/3" label="Sensys hinge" />
+          </div>
         </div>
       </section>
 

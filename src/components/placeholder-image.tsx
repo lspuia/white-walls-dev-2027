@@ -8,10 +8,14 @@ export function PlaceholderImage({
   ratio,
   label,
   className = "",
+  showLabel = true,
 }: {
   ratio?: string;
   label: string;
   className?: string;
+  /** Off when the block sits behind a scrim, where the caption would be
+      unreadable and is not content anyway. */
+  showLabel?: boolean;
 }) {
   return (
     <div
@@ -24,7 +28,9 @@ export function PlaceholderImage({
           "linear-gradient(117.85deg, rgb(213,202,185) 0%, rgb(158,151,142) 42.857%, rgb(132,128,122) 71.429%)",
       }}
     >
-      <span className="eyebrow m-[20px] text-cream/80">{label}</span>
+      {showLabel && (
+        <span className="eyebrow m-[20px] text-cream/80">{label}</span>
+      )}
     </div>
   );
 }

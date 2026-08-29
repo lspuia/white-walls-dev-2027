@@ -90,11 +90,11 @@ export const PRODUCTS: Product[] = [
     },
     name: "Veneto",
     kind: "brand",
-    tagline: "Surfaces and finishes",
+    tagline: "Custom modular wardrobes",
     teaser:
-      "Surfaces and finishes, supplied to order by the studio. Placeholder — copy for this brand is still to come.",
+      "Custom modular wardrobes and storage — sliding, walk-in and openable, plus glass doors, partitions and shelving. Made to the room.",
     body: [
-      "Placeholder. This page is in place so the Veneto range has a home; the studio will supply the description, the product scope and the retail terms.",
+      "Veneto makes custom modular wardrobes and storage for Indian homes — sliding, walk-in and openable wardrobes, framed glass doors, room partitions and shelving, each built to the measured opening rather than to a standard carcass.",
     ],
   },
   {

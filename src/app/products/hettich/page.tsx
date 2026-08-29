@@ -16,21 +16,25 @@ export const metadata: Metadata = {
 const FAMILIES = [
   {
     name: "Furniture hinges",
+    image: "/img/hettich/furniture-hinges.webp",
     line: "The joint every cabinet door turns on.",
     items: ["Sensys", "Intermat", "Onsys", "Veosys", "Slide-On"],
   },
   {
     name: "Drawer systems",
+    image: "/img/hettich/drawer-systems.webp",
     line: "Full boxes, built to run true when loaded.",
     items: ["AvanTech YOU", "ArciTech", "InnoTech Atira", "InnoTech"],
   },
   {
     name: "Runners & channels",
+    image: "/img/hettich/runners-channels.webp",
     line: "Undermount and telescopic, silent or push-to-open.",
     items: ["Quadro undermount", "Telescopic silent", "Push-to-open", "FR runners"],
   },
   {
     name: "Sliding & folding",
+    image: "/img/hettich/sliding-folding.webp",
     line: "Doors that move instead of swing.",
     items: [
       "Top-running systems",
@@ -41,11 +45,13 @@ const FAMILIES = [
   },
   {
     name: "Lift & flap systems",
+    image: "/img/hettich/lift-flap-systems.webp",
     line: "For overhead doors that stay where you put them.",
     items: ["LiftEase M", "LiftEase H", "Flap stays", "Lift-up top box"],
   },
   {
     name: "Kitchen storage",
+    image: "/img/hettich/kitchen-storage.webp",
     line: "The fittings that decide how a kitchen actually works.",
     items: [
       "Pull-out cabinet units",
@@ -56,6 +62,7 @@ const FAMILIES = [
   },
   {
     name: "Wardrobe fittings",
+    image: "/img/hettich/wardrobe-fittings.webp",
     line: "Storage that earns the depth it takes.",
     items: [
       "Pull-out shoe racks",
@@ -66,6 +73,7 @@ const FAMILIES = [
   },
   {
     name: "Door hardware",
+    image: "/img/hettich/door-hardware.webp",
     line: "Beyond the cabinetry — the doors of the house.",
     items: ["Door hinges", "Door closers", "Floor springs", "Mortise locks"],
   },
@@ -157,7 +165,15 @@ export default function HettichPage() {
         <ul className="grid gap-x-[40px] gap-y-[48px] tab:grid-cols-2 desk:grid-cols-3">
           {FAMILIES.map((family) => (
             <li key={family.name} className="flex flex-col gap-[16px]">
-              <PlaceholderImage ratio="4/3" label={family.name} />
+              <div className="relative aspect-[4/3] w-full overflow-hidden bg-sand">
+                <Image
+                  src={family.image}
+                  alt={family.name}
+                  fill
+                  sizes="(min-width: 1200px) 33vw, (min-width: 834px) 50vw, calc(100vw - 48px)"
+                  className="object-cover"
+                />
+              </div>
               <h3 className="mt-[2px] font-display text-[length:var(--text-service)] font-light leading-[1.18] text-ink">
                 {family.name}
               </h3>

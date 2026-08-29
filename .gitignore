@@ -39,3 +39,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# design source images — the shipped WebP lives in public/img/
+handoffs/hettich-cards/

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { PlaceholderImage } from "@/components/placeholder-image";
 import { WhatsAppBand } from "@/components/whatsapp-band";
 import { productBySlug } from "@/lib/products";
@@ -275,12 +274,6 @@ export default function BrassagePage() {
               quantities, and we will confirm the lead time with the quote.
               Orders ship anywhere in Mizoram.
             </p>
-            <Link
-              href="/products"
-              className="eyebrow mt-[6px] self-start tracking-[0.176em] text-bronze underline decoration-dotted decoration-1 underline-offset-[6px] transition-colors hover:text-ink"
-            >
-              All products
-            </Link>
           </div>
         </div>
       </section>

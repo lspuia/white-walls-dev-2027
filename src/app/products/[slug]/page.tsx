@@ -10,8 +10,14 @@ import { ShopSocial } from "@/components/shop-social";
 const LISTING_SLOTS = ["01", "02", "03", "04", "05", "06"] as const;
 
 /** Every product page is known at build time, so all render static. */
+/** Slugs with their own bespoke route, which takes precedence over this one.
+    They must be excluded here or the two collide at build. */
+const BESPOKE = ["hettich"];
+
 export function generateStaticParams() {
-  return PRODUCTS.map((product) => ({ slug: product.slug }));
+  return PRODUCTS.filter((product) => !BESPOKE.includes(product.slug)).map(
+    (product) => ({ slug: product.slug })
+  );
 }
 
 export async function generateMetadata(

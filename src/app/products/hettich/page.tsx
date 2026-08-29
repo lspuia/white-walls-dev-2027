@@ -126,7 +126,7 @@ export default function HettichPage() {
             ship.
           </p>
 
-          <p className="max-w-[720px] text-[length:var(--text-body)] leading-[1.82] text-soft">
+          <p className="max-w-[720px] text-[length:var(--text-lead)] leading-[1.8] text-soft">
             Tell us the cabinet sizes, or send a drawing, and we will quote the
             fittings to suit.
           </p>

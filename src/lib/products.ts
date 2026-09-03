@@ -48,6 +48,23 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
+    slug: "blum",
+    logo: {
+      src: "/brand/products/blum.svg",
+      width: 100,
+      height: 50,
+    },
+    name: "Blum",
+    kind: "brand",
+    tagline: "Furniture fittings and motion technology",
+    teaser:
+      "Austrian furniture hardware — hinges, box systems, runners and lift systems, and the motion technology that closes them softly or opens them at a touch. Supplied to order.",
+    body: [
+      "Blum makes the parts of a kitchen that move: the hinge a door turns on, the drawer box and the runner beneath it, and the lift that holds an overhead front open where you left it.",
+      "Motion is the point of the catalogue. BLUMOTION damps a door or drawer closed, TIP-ON opens a handleless front at a push, and SERVO-DRIVE opens it electrically.",
+    ],
+  },
+  {
     slug: "brassage",
     logo: {
       src: "/brand/products/brassage.webp",
